@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap");
+
+h1 {
+    font-family: "Alegreya Sans SC", sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+}
+
+header {
+    background-color: #2a2b2a;
+    box-shadow: 5px 5px 3px #191a19;
+    display: flex;
+    position: static;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.logoLink {
+    font-family: "Alegreya Sans SC", sans-serif;
+    flex: 1;
+    text-decoration: none;
+    color: #f0eff4;
+    font-size: 40px;
+    padding: 0.2rem 1rem;
+    margin-top: 0.4rem;
+    transition: color 0.2s ease-out;
+}
+
+.logoLink:hover {
+    color: #F26419;
+}
+
+.navigation {
+    flex: 2;
+}
+
+.navigationLinksHolder {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0.9rem;
+}
+
+.navLink {
+    margin: auto;
+    font-family: "Alegreya Sans SC", sans-serif;
+    text-decoration: none;
+    color: #f0eff4;
+    font-size: 25px;    
+    padding: 0.2rem 1rem;
+    margin-right: 0.8rem;
+    transition: color 0.2s ease-out;
+}
+
+.navLink:hover {
+    color: #F26419;
+}
+
+.optionsButton {
+    font-family: "Alegreya Sans SC", sans-serif;
+    color: #f0eff4;
+    font-size: 25px;
+    background-color: #2a2b2a;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s ease-out;
+}
+
+.optionsButton:hover {
+    color: #F26419;
+}
+
+.homepageHolder {
+    margin-top: 2rem;
+}
+
+.homepageMainContent {
+    display: flex;
+    justify-content: center;
+}
+
+.profilePhotoHolder {
+    flex: 1;
+}
+
+.profilePhoto {
+    width: 25rem;
+    height: 25rem;
+    border-radius: 15rem;
+    border: 0.3rem solid #F58A07;
+    box-shadow: 3px 3px 3px #191a19;
+    margin-left: 25rem;
+    margin-top: 2rem;
+}
+
+.creatorInfo {
+    flex: 1;
+}
+
+.description {
+    background-color: #087E8B;
+    width: 40rem;
+    font-size: 28px;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    box-shadow: 5px 5px 3px #191a19;
+}
+
+.sections {
+    display: flex;  
+    margin-top: 5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.sectionLink {
+    font-family: "Alegreya Sans SC", sans-serif;
+    text-decoration: none;
+    color: #f0eff4;
+    font-size: 25px; 
+    text-wrap: wrap;
+    flex: 1;
+    text-align: center;
+    background-color: #087E8B;
+    margin-right: 2.5rem;
+    margin-left: 2.5rem;
+    padding: 3rem;
+    border-radius: 10rem;
+    box-shadow: 5px 5px 2px #191a19;
+    transition: transform 0.2s ease-in-out;
+    transition: background-color 0.2s ease-out;
+}
+
+.sectionLink:hover {
+    background-color: #F26419 ;
+    transform: scale(1.05);
+}

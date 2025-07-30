@@ -3,9 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="author" content="Christine Holt">
+    <meta name="description" content="Home Page. This is the main page that contains a photo of the creator, a small description ann links to the rest of the website">
+    <meta name="keywords" content="Homepage, portfolio">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles/mainStyles.css">
+    <link rel="stylesheet" href="styles/indexStyles.css">
+    <script type="module"> import { navigationBar } from "./scripts/navigation.js" 
+        navigationBar("Home")</script>
 </head>
 <body>
-    
+    <header>
+        <a href="./index.html" class="logoLink">Christine Holt</a>
+        <nav class="navigation">
+            <section class="navigationLinksHolder" id="navLinks">
+                <article class="navigationLinks"></article>
+                <button class="optionsButton">Options</button>
+            </section>
+        </nav>
+    </header>
+    <section class="homepageHolder">
+        <article class="homepageMainContent">
+            <div class="profilePhotoHolder">
+                <img class="profilePhoto" src="./images/picture.jpg" alt="Image of Christine Holt" />
+            </div>            
+            <div class="creatorInfo">
+                <h1>Christine Holt</h1>
+                <article class="description">
+                    <p>Hi! My name is Christine. I am currently completing my honors degree in BA Digital Arts at the University of The Witwatersrand. 
+                    I enjoy creating games and web related projects, and learning more about how I can improve my skills. 
+                    To see more, please have a look around.</p>
+                </article>
+            </div>
+        </article>       
+        <section class="sections"></section>
+    </section>
+    <footer>
+        <p>&copy; 2025 Christine Holt. All Rights Reserved.</p>
+    </footer>
+    <script src="scripts/sections.js"></script>
 </body>
 </html>
