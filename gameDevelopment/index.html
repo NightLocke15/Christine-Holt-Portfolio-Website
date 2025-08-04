@@ -7,14 +7,22 @@
     <meta name="description" content="Game Development. This page showcases the creator's game development projects.">
     <meta name="keywords" content="Game Development, portfolio">
     <title>Game Development</title>
+    <link rel="stylesheet" href="../styles/mainStyles.css">
+    <script type="module"> import { navigationBar } from "../scripts/navigation.js" 
+        navigationBar("Game Development")</script>
 </head>
 <body>
     <header>
-        <a href="/Christine-Holt-Portfolio-Website/index.html">Christine Holt</a>
-        <nav>
-            <section class="navigationLinks" id="navLinks"></section>
+        <a href="./index.html" class="logoLink">Christine Holt</a>
+        <nav class="navigation">
+            <section class="navigationLinksHolder" id="navLinks">
+                <article class="navigationLinks"></article>
+                <button class="optionsButton">Options</button>
+            </section>
         </nav>
     </header>
-    
+    <footer>
+        <p>&copy; 2025 Christine Holt. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>

@@ -7,14 +7,22 @@
     <meta name="description" content="About page. Everything about the creator can be found here.">
     <meta name="keywords" content="About, portfolio">
     <title>About</title>
+    <link rel="stylesheet" href="../styles/mainStyles.css">
+    <script type="module"> import { navigationBar } from "../scripts/navigation.js" 
+        navigationBar("About")</script>
 </head>
 <body>
     <header>
-        <a href="/Christine-Holt-Portfolio-Website/index.html">Christine Holt</a>
-        <nav>
-            <section class="navigationLinks" id="navLinks"></section>
+        <a href="./index.html" class="logoLink">Christine Holt</a>
+        <nav class="navigation">
+            <section class="navigationLinksHolder" id="navLinks">
+                <article class="navigationLinks"></article>
+                <button class="optionsButton">Options</button>
+            </section>
         </nav>
     </header>
-    
+    <footer>
+        <p>&copy; 2025 Christine Holt. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>

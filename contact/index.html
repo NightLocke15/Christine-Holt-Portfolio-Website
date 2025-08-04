@@ -7,14 +7,22 @@
     <meta name="description" content="Contact page. All methods as to contact the creator will be found here.">
     <meta name="keywords" content="Contact, portfolio">
     <title>Contact</title>
+    <link rel="stylesheet" href="../styles/mainStyles.css">
+    <script type="module"> import { navigationBar } from "../scripts/navigation.js" 
+        navigationBar("Contact")</script>
 </head>
 <body>
     <header>
-        <a href="/Christine-Holt-Portfolio-Website/index.html">Christine Holt</a>
-        <nav>
-            <section class="navigationLinks" id="navLinks"></section>
+        <a href="./index.html" class="logoLink">Christine Holt</a>
+        <nav class="navigation">
+            <section class="navigationLinksHolder" id="navLinks">
+                <article class="navigationLinks"></article>
+                <button class="optionsButton">Options</button>
+            </section>
         </nav>
     </header>
-    
+    <footer>
+        <p>&copy; 2025 Christine Holt. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>

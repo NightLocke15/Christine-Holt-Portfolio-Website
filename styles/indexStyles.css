@@ -6,75 +6,6 @@ h1 {
     font-size: 48px;
 }
 
-header {
-    background-color: #2a2b2a;
-    box-shadow: 5px 5px 3px #191a19;
-    display: flex;
-    position: static;
-}
-
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
-}
-
-.logoLink {
-    font-family: "Alegreya Sans SC", sans-serif;
-    flex: 1;
-    text-decoration: none;
-    color: #f0eff4;
-    font-size: 40px;
-    padding: 0.2rem 1rem;
-    margin-top: 0.4rem;
-    transition: color 0.2s ease-out;
-}
-
-.logoLink:hover {
-    color: #F26419;
-}
-
-.navigation {
-    flex: 2;
-}
-
-.navigationLinksHolder {
-    display: flex;
-    justify-content: flex-end;
-    margin: 0.9rem;
-}
-
-.navLink {
-    margin: auto;
-    font-family: "Alegreya Sans SC", sans-serif;
-    text-decoration: none;
-    color: #f0eff4;
-    font-size: 25px;    
-    padding: 0.2rem 1rem;
-    margin-right: 0.8rem;
-    transition: color 0.2s ease-out;
-}
-
-.navLink:hover {
-    color: #F26419;
-}
-
-.optionsButton {
-    font-family: "Alegreya Sans SC", sans-serif;
-    color: #f0eff4;
-    font-size: 25px;
-    background-color: #2a2b2a;
-    border: none;
-    cursor: pointer;
-    transition: color 0.2s ease-out;
-}
-
-.optionsButton:hover {
-    color: #F26419;
-}
-
 .homepageHolder {
     margin-top: 2rem;
 }
@@ -113,6 +44,8 @@ footer {
 
 .sections {
     display: flex;  
+    flex-flow: row wrap;
+    flex-wrap: wrap;
     margin-top: 5rem;
     margin-left: 5rem;
     margin-right: 5rem;
