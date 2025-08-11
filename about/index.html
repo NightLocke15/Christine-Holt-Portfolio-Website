@@ -8,19 +8,105 @@
     <meta name="keywords" content="About, portfolio">
     <title>About</title>
     <link rel="stylesheet" href="../styles/mainStyles.css">
+    <link rel="stylesheet" href="../styles/aboutStyles.css">
     <script type="module"> import { navigationBar } from "../scripts/navigation.js" 
         navigationBar("About")</script>
 </head>
 <body>
     <header>
-        <a href="./index.html" class="logoLink">Christine Holt</a>
+        <a href="./index.html" class="logoLink">
+            <p class="logoText">Christine Holt</p>
+        </a>
         <nav class="navigation">
             <section class="navigationLinksHolder" id="navLinks">
                 <article class="navigationLinks"></article>
-                <button class="optionsButton">Options</button>
             </section>
         </nav>
     </header>
+    <h1>About</h1>
+    <section class="aboutContentContainer">        
+        <article class="personalContent">
+            <div class="photoHolder">
+                <img class="photo" src="../images/main/picture.jpg" alt="Image of Christine Holt" />
+            </div> 
+            <div class="infoContainer">
+                <h2>Christine Holt</h2>
+                <p class="text">Hi! My name is Christine. I am not all that great at talking about myself, but I will give a quick summary. I am a hard working individual with a drive to learn new things
+                    and possibly pass on the knowledge I gain to others. I am passionate about creating and sharing and I cannot wait to tackle new challenges in my work life. I truly enjoy 
+                    web and game development, and I look forward to see where I end up and what I can learn from my peers and my work. I also enjoy the small things, like playing games with my friends
+                    and creating things with my hobbies that includes crocheting, painting, drawing and any other creative means I can get my hands on.
+                </p> 
+            </div>                      
+        </article>
+        <article class="skillsContent">
+            <h2>Skills</h2>
+            <p class="text">My skills are something I am consistently trying to improve and add to through courses and practice.</p>
+            <section class="skillsLayout">
+                <article class="skillClass">
+                    <p class="heading">Coding</p>
+                    <p class="skillItem">HTML</p>
+                    <p class="skillItem">JavaScript</p>
+                    <p class="skillItem">CSS</p>
+                    <p class="skillItem">React.js</p>
+                    <p class="skillItem">React Native</p>
+                    <p class="skillItem">C#</p>
+                    <p class="skillItem">Unity</p>
+                </article>
+                <article class="skillClass">
+                    <p class="heading">Creative and Design</p>
+                    <p class="skillItem">Pixel Art</p>
+                    <p class="skillItem">Figma</p>
+                    <p class="skillItem">Basic Digital Art</p>
+                    <p class="skillItem">Basic Blender</p>
+                </article>   
+                <article class="skillClass">
+                    <p class="heading">Other</p>
+                    <p class="skillItem">Administration (Excel, Word)</p>
+                    <p class="skillItem">Teaching</p>
+                </article>   
+            </section>                         
+        </article>
+        <article class="educationContent">
+            <h2>Education</h2>
+            <section class="eduSection">
+                <p class="eduHeading">Ho&euml;rskool Transvalia</p>
+                <p class="eduYear">2015 - 2019</p>
+            </section>            
+            <p class="eduItem">Matriculated with distinctions in English, Accounting, Engineering and Graphic Design and Life Orientation.</p>
+            <section class="eduSection">
+                <p class="eduHeading">University of Pretoria</p>
+                <p class="eduYear">2020</p>
+            </section>            
+            <p class="eduItem">Studied BEng Civil Engineering.</p>
+            <p class="eduItem">Passed all first semester modules.</p>
+            <p class="eduItem">Received a distinction for Graphical Communication.</p>
+            <section class="eduSection">
+                <p class="eduHeading">University of the Witwatersrand</p>
+                <p class="eduYear">2022 - Current</p>
+            </section>            
+            <p class="eduItem">I am currently completing my BHons in Digital Arts with a focus on Web Development and Game Design.</p>
+        </article>
+        <article class="workContent">
+            <h2>Work Experience</h2>
+            <section class="eduSection">
+                <p class="eduHeading">TutorsInk</p>
+                <p class="eduYear">2021 - 2022</p>
+            </section>
+            <p class="eduItem">Grade 11 and Grade 12 Mathematics Tutor.</p>
+            <p class="eduItem">Even though I was mainly tutoring Mathematics, I also tutored a few students in Engineering and Graphical Design.</p>
+            <p class="eduItem">I was also heavily involved in the administrative side of the bussiness</p>
+        </article>
+        <article class="interestContent">
+            <h2>Interests</h2>
+            <p class="eduItem">Gaming</p>
+            <p class="eduItem">Programming</p>
+            <p class="eduItem">Literature</p>
+            <p class="eduItem">History, Research</p>
+            <p class="eduItem">Arts, Crafts, Creating</p>
+            <p class="eduItem">Music</p>
+            <p class="eduItem">Dancing (Currently completing my Advanced Tap dancing exam)</p>
+        </article>
+    </section>
     <footer>
         <p>&copy; 2025 Christine Holt. All Rights Reserved.</p>
     </footer>

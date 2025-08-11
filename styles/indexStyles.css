@@ -7,7 +7,7 @@ h1 {
 }
 
 .homepageHolder {
-    margin-top: 2rem;
+    margin-top: 8rem;
 }
 
 .homepageMainContent {
@@ -34,12 +34,16 @@ h1 {
 }
 
 .description {
-    background-color: #087E8B;
+    background: linear-gradient(#087E8B, #087E8B) padding-box,
+              linear-gradient(to right, #F58A07, #F26419) border-box;
+    border-radius: 2rem;
+    border: 3px solid transparent;
     width: 40rem;
     font-size: 28px;
     padding: 1rem 2rem;
     border-radius: 2rem;
-    box-shadow: 5px 5px 3px #191a19;
+    position: relative;
+    box-shadow: 3px 3px 3px #191a19;
 }
 
 .sections {
@@ -65,11 +69,11 @@ h1 {
     padding: 3rem;
     border-radius: 10rem;
     box-shadow: 5px 5px 2px #191a19;
-    transition: transform 0.2s ease-in-out;
-    transition: background-color 0.2s ease-out;
+    position: relative;
+    transition: transform, background-color, 200ms ease-in-out;
 }
 
 .sectionLink:hover {
-    background-color: #F26419 ;
-    transform: scale(1.05);
+    transform: translateY(-10px);
+    background-color: #F26419;
 }

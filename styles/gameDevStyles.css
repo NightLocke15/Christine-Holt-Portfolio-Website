@@ -16,12 +16,13 @@ img {
     border: 0.2rem solid #F58A07;
 }
 
-.webDevItemsContainer {
-    margin-top: 3rem;  
+.gameDevItemsContainer {
+    margin-top: 3rem;
     margin-left: auto;
-    margin-right: auto;   
+    margin-right: auto;    
     display: flex;
     width: 80%;
+    height: 80%;
     flex-flow: row wrap;
     flex-wrap: wrap;
     justify-content: center;
@@ -29,7 +30,7 @@ img {
     padding-bottom: 5rem;
 }
 
-.webDevItem {
+.gameDevItem {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2rem;
@@ -43,12 +44,12 @@ img {
     cursor: pointer;
 }
 
-.webDevItem:hover {
+.gameDevItem:hover {
     background-color: #F26419 ;
     transform: translateY(-10px);
 }
 
-.webDevItem p {
+.gameDevItem p {
     font-family: "Alegreya Sans SC", sans-serif;
     font-size: 28px;
 }
