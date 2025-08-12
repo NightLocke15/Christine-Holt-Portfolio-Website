@@ -6,12 +6,21 @@ h1 {
     font-size: 48px;
     text-align: center;
     margin-top: 5rem;
+    animation: transIn 0.5s;
 }
 
 h2 {
     font-family: "Alegreya Sans SC", sans-serif;
     font-weight: 400;
     font-size: 30px;
+    border: 2px dashed #087E8B;
+    border-radius: 1rem;
+    padding: 10px;
+    max-width: fit-content;
+}
+
+.name {
+    border: none;
 }
 
 .text {
@@ -29,17 +38,13 @@ h2 {
     justify-content: center;
     align-content: center;
     padding-bottom: 5rem;
+    animation: transIn 0.5s;
 }
 
 .personalContent {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2rem;
-    background: linear-gradient(#087E8B, #087E8B) padding-box,
-              linear-gradient(to right, #F58A07, #F26419) border-box;
-    border-radius: 2rem;
-    border: 3px solid transparent;
-    box-shadow: 3px 3px 3px #191a19;
     display: flex;
     padding: 20px;
     width: 100%;
@@ -47,18 +52,23 @@ h2 {
 }
 
 .infoContainer {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    background: linear-gradient(#087E8B, #087E8B) padding-box,
+              linear-gradient(to right, #F58A07, #F26419) border-box;
+    border-radius: 2rem;
+    border: 3px solid transparent;
+    padding: 2rem;
+    font-size: 18px;
 }
 
 .photoHolder {
     flex: 1;
-    margin-top: 1rem;
+    margin-top: 2rem;
+    margin-right: 1rem;
 }
 
 .photo {
-    width: 15rem;
-    height: 15rem;
+    width: 25rem;
+    height: 25rem;
     border-radius: 15rem;
     border: 0.15rem solid #F58A07;
 }
@@ -67,16 +77,11 @@ h2 {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2rem;
-    background: linear-gradient(#087E8B, #087E8B) padding-box,
-              linear-gradient(to right, #F58A07, #F26419) border-box;
-    border-radius: 2rem;
-    border: 3px solid transparent;
     width: 100%;
     padding-left: 6rem;
     padding-right: 6rem;
     padding-bottom: 1rem;
     padding-top: 1rem;
-    box-shadow: 3px 3px 3px #191a19;
 }
 
 .skillsLayout {
@@ -95,6 +100,7 @@ h2 {
     font-weight: 400;
     font-size: 22px;
     font-family: "Alegreya Sans SC", sans-serif;
+    
 }
 
 .skillItem {
@@ -110,7 +116,7 @@ h2 {
     height: 10px;
     left: 0;
     top: 20%;
-    background: linear-gradient(#F26419, #F58A07) padding-box;
+    background-color: #087E8B;
     border-radius: 2rem;
     border: 2px solid #F58A07;
 }
@@ -119,16 +125,11 @@ h2 {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2rem;
-    background: linear-gradient(#087E8B, #087E8B) padding-box,
-              linear-gradient(to right, #F58A07, #F26419) border-box;
-    border-radius: 2rem;
-    border: 3px solid transparent;
     width: 100%;
     padding-left: 6rem;
     padding-right: 6rem;
      padding-bottom: 1rem;
     padding-top: 1rem;
-    box-shadow: 3px 3px 3px #191a19;
 }
 
 .eduSection {
@@ -151,8 +152,7 @@ h2 {
     bottom: 0;
     left: 0;
     width: 200%;
-    background-color: #087E8B;
-    border: 1px dashed #F26419;
+    border: 1px dashed #087E8B;
 }
 
 .eduYear {
@@ -176,38 +176,42 @@ h2 {
     height: 10px;
     left: 0;
     top: 15%;
-    background: linear-gradient(#F26419, #F58A07) padding-box;
+    background-color: #087E8B;
     border-radius: 2rem;
     border: 2px solid #F58A07;
 }
 
 .workContent {
-    width: 45%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2rem;
-    background: linear-gradient(#087E8B, #087E8B) padding-box,
-              linear-gradient(to right, #F58A07, #F26419) border-box;
-    border-radius: 2rem;
-    border: 3px solid transparent;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
      padding-bottom: 1rem;
     padding-top: 1rem;
-    box-shadow: 3px 3px 3px #191a19;
 }
 .interestContent {
-    width: 45%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2rem;
-    background: linear-gradient(#087E8B, #087E8B) padding-box,
-              linear-gradient(to right, #F58A07, #F26419) border-box;
     border-radius: 2rem;
     border: 3px solid transparent;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
      padding-bottom: 1rem;
     padding-top: 1rem;
-    box-shadow: 3px 3px 3px #191a19;
+}
+
+@keyframes transIn {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
 }

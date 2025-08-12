@@ -16,4 +16,15 @@ export function navigationBar(currentPage) {
     }).join("");
 
     navList.innerHTML = links;
+
+    const linkList = document.querySelectorAll(".navLink");
+
+    linkList.forEach((link) => {
+        if (link.id !== currentPage) {
+            link.setAttribute('id', "otherPage");
+        }      
+        else {
+            link.setAttribute('id', "currentPage");
+        }  
+    });
 }

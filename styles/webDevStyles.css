@@ -6,6 +6,7 @@ h1 {
     font-size: 48px;
     text-align: center;
     margin-top: 5rem;
+    animation: transIn 0.5s;
 }
 
 img {
@@ -27,6 +28,7 @@ img {
     justify-content: center;
     align-content: center;
     padding-bottom: 5rem;
+    animation: transIn 0.5s;
 }
 
 .webDevItem {
@@ -41,6 +43,8 @@ img {
     box-shadow: 5px 5px 2px #191a19;
     transition: transform, background-color, 0.2s ease-in-out;
     cursor: pointer;
+    text-decoration: none;
+    color: #f0eff4;
 }
 
 .webDevItem:hover {
@@ -51,5 +55,17 @@ img {
 .webDevItem p {
     font-family: "Alegreya Sans SC", sans-serif;
     font-size: 28px;
+}
+
+@keyframes transIn {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
 }
 

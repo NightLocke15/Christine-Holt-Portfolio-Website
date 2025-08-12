@@ -8,6 +8,7 @@ h1 {
 
 .homepageHolder {
     margin-top: 8rem;
+    animation: transIn 0.75s;
 }
 
 .homepageMainContent {
@@ -76,4 +77,16 @@ h1 {
 .sectionLink:hover {
     transform: translateY(-10px);
     background-color: #F26419;
+}
+
+@keyframes transIn {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
 }
