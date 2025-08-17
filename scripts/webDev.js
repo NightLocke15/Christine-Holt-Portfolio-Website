@@ -9,6 +9,7 @@ function addWebItems() {
         return `<a class="webDevItem" id="${item.id}" href="../webDevelopment/webPortfolioItem.html?id=${item.id}">
                     <img src="${item.img}"/>
                     <p>${item.name}</p>
+                    <p class="statusReport">${item.status}</p>
                 </a>`
     }).join("");
 

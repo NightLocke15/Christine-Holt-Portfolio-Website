@@ -9,6 +9,7 @@ function addWebItems() {
             return `<a class="gameDevItem" id="${item.id}" href="../gameDevelopment/gamePortfolioItem.html?id=${item.id}">
                         <img src="${item.img}"/>
                         <p>${item.name}</p>
+                        <p class="statusReport">${item.status}</p>
                     </a>`
         }).join("");
     

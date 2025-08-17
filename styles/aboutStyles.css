@@ -15,12 +15,14 @@ h2 {
     font-size: 30px;
     border: 2px dashed #087E8B;
     border-radius: 1rem;
+    background-color: #087e8b49;
     padding: 10px;
     max-width: fit-content;
 }
 
 .name {
     border: none;
+    background-color: #2a2b2a;
 }
 
 .text {

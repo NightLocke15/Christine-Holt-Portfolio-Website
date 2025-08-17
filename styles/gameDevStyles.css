@@ -1,5 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap");
 
+@keyframes transIn {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes upDown {
+    0% {
+        transform: translate(0px, 0px) rotate(225deg);
+    }
+
+    50% {
+        transform: translate(0px, 20px) rotate(225deg);
+    }
+
+    100% {
+        transform: translate(0px, 0px) rotate(225deg);
+    }
+}
+
 h1 {
     font-family: "Alegreya Sans SC", sans-serif;
     font-weight: 400;
@@ -7,6 +33,30 @@ h1 {
     text-align: center;
     margin-top: 5rem;
     animation: transIn 0.5s;
+    flex: 100%;
+}
+
+h2 {
+    font-family: "Alegreya Sans SC", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    text-align: center;
+    animation: transIn 0.5s;
+    flex: 100%;
+}
+
+h3 {
+    font-family: "Alegreya Sans SC", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    text-align: left;
+    animation: transIn 0.5s;
+    flex: 100%;
+    border: 2px dashed #F26419;
+    border-radius: 1rem;
+    background-color: #f2651949;
+    max-width: fit-content;
+    padding: 10px;
 }
 
 img {
@@ -15,7 +65,18 @@ img {
     object-fit: cover;
     border-radius: 15rem;
     border: 0.2rem solid #F58A07;
-    position: relative;
+}
+
+.statusReport {
+     font-family: "Alegreya Sans SC", sans-serif;
+    font-weight: 400;
+    border: 2px dashed #F58A07;
+    border-radius: 1rem;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
 .gameDevItemsContainer {
@@ -40,6 +101,7 @@ img {
     text-align: center;
     background-color: #087E8B;
     padding: 2rem;
+    padding-bottom: 5rem;
     width: 17rem;
     border-radius: 2rem;
     box-shadow: 5px 5px 2px #191a19;
@@ -47,6 +109,7 @@ img {
     cursor: pointer;
     text-decoration: none;
     color: #f0eff4;
+    position: relative
 }
 
 .gameDevItem:hover {
@@ -59,14 +122,199 @@ img {
     font-size: 28px;
 }
 
-@keyframes transIn {
-    from {
-        opacity: 0;
-        scale: 0.5;
-    }
+.portfolioItemShowcase {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    animation: transIn 0.25s;
+}
 
-    to {
-        opacity: 1;
-        scale: 1;
-    }
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border: 2px dashed #087E8B;
+    border-radius: 1rem;
+    background-color: #087e8b7c;
+    max-width: fit-content;
+    padding: 10px 15px 0px;
+}
+
+.heading {
+    font-family: "Alegreya Sans SC", sans-serif;
+    font-size: 28px;
+    margin: 0%;
+}
+
+.statusParagraph {
+    font-size: 20px;
+}
+
+.documentContainer {    
+    border: 2px dashed #087E8B;
+    border-radius: 1rem;
+    background-color: #087e8b7c;
+    margin-top: 3rem;
+    padding: 0px 2rem;
+}
+
+.paragraph {
+    font-size: 20px;
+    line-height: 1.8rem;
+    margin: 2rem 0rem;
+}
+
+.paragraph i {
+    color: #F26419;
+}
+
+.mainImage {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 35rem;
+    height: 20rem;
+    border-radius: 2rem;
+    object-fit: contain;
+    max-width: fit-content;
+    max-height: fit-content;
+}
+
+.itemLinks {
+    flex: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.itemLinks a {
+    text-decoration: none;
+    color: white;
+    width: 30%;
+    text-align: center;
+    background-color: #087E8B;
+    border-radius: 2rem;
+    height: 3rem;
+    align-content: center;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    box-shadow: 5px 5px 2px #191a19;
+    font-family: "Alegreya Sans SC", sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    transition: transform, background-color, 200ms ease-in-out;
+}
+
+.itemLinks a:hover {
+    transform: translateY(-10px);
+    background-color: #F26419;
+}
+
+.listItem {
+    font-size: 20px;
+    position: relative;
+    padding-left: 20px;
+    line-height: 1.8rem;
+    margin: 2rem 0rem;
+}
+
+.listItem::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 0;
+    top: 20%;
+    background-color: #087E8B;
+    border-radius: 2rem;
+    border: 2px solid #F58A07;
+}
+
+.listItem.sub {
+    padding-left: 60px;
+}
+
+.listItem.sub::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 0;
+    top: 20%;
+    background-color: #F58A07;
+    border-radius: 2rem;
+    border: 2px solid #087E8B;
+    margin-left: 40px;
+}
+
+.listItem.subTwo {
+    padding-left: 80px;
+}
+
+.listItem.subTwo::before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    left: 0;
+    top: 20%;
+    background-color: #F58A07;
+    border-radius: 0;
+    border: 2px solid #F26419;
+    margin-left: 60px;
+}
+
+.refLink {
+    color: #F58A07;
+}
+
+.downArrow {
+    width: 50px;
+    height: 50px;
+    border-left: 3px dotted #F26419;
+    border-top: 3px dotted #F26419;
+    transform: rotate(225deg);
+    margin-left: auto;
+    margin-right: auto;
+    animation: upDown 1s ease-in-out infinite;
+    cursor: pointer;
+}
+
+.documentImage {
+    width: 100%;
+    height: 30rem;
+    border-radius: 2rem;
+    object-fit: contain;
+    max-width: fit-content;
+    max-height: fit-content;
+    border: none;
+    border-radius: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+
+td, th {
+    border: 1px solid #F26419;
+    padding: 8px;
+}
+
+thead {
+    text-align: center;
+}
+
+caption {
+    text-align: left;
 }
