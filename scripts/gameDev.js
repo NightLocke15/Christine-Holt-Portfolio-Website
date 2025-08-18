@@ -7,7 +7,7 @@ addWebItems();
 function addWebItems() {
     let items = gameDevItems.map((item) => {
             return `<a class="gameDevItem" id="${item.id}" href="../gameDevelopment/gamePortfolioItem.html?id=${item.id}">
-                        <img src="${item.img}"/>
+                        <img src="${item.img}" alt="Front Page image of the ${item.name} project."/>
                         <p>${item.name}</p>
                         <p class="statusReport">${item.status}</p>
                     </a>`

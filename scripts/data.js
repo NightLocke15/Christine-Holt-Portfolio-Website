@@ -18,12 +18,12 @@ export const webDevItems = [
         <h3>Style Guide</h3>
         <p class="paragraph">The styling might still change in the future, in case I find something doesn’t work according to the plan. But for now, this will be the styling and functions I aim for in the further development of this application. </p>
         <p class="paragraph">(Only the mobile application wireframes will be found below; wireframes for the dashboard will be made once the application is satisfyingly functional.)</p>
-        <img class="documentImage" src="../images/webDev/nudge/headerText.png" style="width: 60%;" alt="IMAGES" />
-        <img class="documentImage" src="../images/webDev/nudge/bodyText.png" style="width: 60%;" alt="IMAGES" />
+        <img class="documentImage" src="../images/webDev/nudge/headerText.png" style="width: 60%;" alt="Image of text showing what the Trebuchet Font looks like when typed out." />
+        <img class="documentImage" src="../images/webDev/nudge/bodyText.png" style="width: 60%;"  alt="Image of text showing what the Roboto Font looks like when typed out." />
         <p class="paragraph"><i>Font Choice: </i></p>
         <p class="paragraph">Both Trebuchet MS and Roboto are Sans-Serif typeface fonts. Sans-Serif fonts are fonts that have no extra bits added to the edges of the font (Tymoshchuk, 2021). And although, as Tymoshchuk (2021) states, most neurotypical people can’t really find a difference in readability when reading sans-serif fonts and serif fonts (like Times New Roman), for people who are neurodivergent and people who have poor eyesight, sans-serif fonts are easier to read. Considering that the idea for this application started with the aim to help people with Alzheimer’s and Dementia, and people who live with these are often elderly, it is safe to assume that these fonts would be easier to read. The use of these types of fonts for more accessible design is also mentioned by Ghorbel et al. (2017) when talking about people with Alzheimer’s who have poor eyesight, by Khan et al. (2018) for children with dyslexia and by Baxter (2025) for people who live with ADHD.</p>
-        <img class="documentImage" src="../images/webDev/nudge/light.png" style="width: 40%; height: 40%;" alt="IMAGES" />
-        <img class="documentImage" src="../images/webDev/nudge/dark.png" style="width: 40%; height: 40%;" alt="IMAGES" />
+        <img class="documentImage" src="../images/webDev/nudge/light.png" style="width: 40%; height: 40%;" alt="Image showing the light colour theme that will be used in the app." />
+        <img class="documentImage" src="../images/webDev/nudge/dark.png" style="width: 40%; height: 40%;" alt="Image showing the dark colour theme that will be used in the app." />
         <p class="paragraph"><i>Colour Schemes:</i></p> 
         <p class="paragraph">For now, I have decided to do only a light and dark colour scheme. I focused on the contrast, but also made sure that the contrast is not too heavy. I still wanted there to be enough contrast, so everything is easy to see, but with less contrast, there is less eye strain. Khan et al. (2018) and Ghorbel et al. (2017) for Dyslexia and Alzheimer’s, respectively, both mention avoiding very high contrast, stating that findings show that less contrast can make reading and using the design easier and more accessible. </p>
         <p class="paragraph"><i>Outline:</i></p> 
@@ -43,14 +43,14 @@ export const webDevItems = [
         <h3>Screenshots and Wireframes</h3>
         <p class="paragraph">Note: The picture on the left is what the app page currently looks like. The two on the right are the wireframes for future plans (unless otherwise states).</p>
         <div class="row">
-            <img class="documentImage" src="../images/webDev/nudge/startPageCur.png" style="width: 34%; height: 34%;" alt="IMAGES" />
-            <img class="documentImage" src="../images/webDev/nudge/startPageNewL.png" style="width: 30%; height: 30%;" alt="IMAGES" />
-            <img class="documentImage" src="../images/webDev/nudge/startPageNewD.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/startPageCur.png" style="width: 34%; height: 34%;" alt="What the splash screen currently looks like. White background with get started button and the App name." />
+            <img class="documentImage" src="../images/webDev/nudge/startPageNewL.png" style="width: 30%; height: 30%;" alt="What the splash screen will look like in the future with a light theme. White background with a get started button and the app name with updated fonts." />
+            <img class="documentImage" src="../images/webDev/nudge/startPageNewD.png" style="width: 30%; height: 30%;" alt="What the splash screen will look like in the future with a dark theme. Charcoal background with a get started button and the app name with updated fonts" />
         </div>
         <p class="paragraph"><i>Splash Screen:</i></p>
         <p class="paragraph">This is the page that the user will see when they open the application. As shown above, the fonts will be changed to be more legible than the initial design. This page will take the user to a page where they will either log in or create a new account. If the user has already been logged in, the page will immediately go to the Home Page.</p>
         <div class="row">
-            <img class="documentImage" src="../images/webDev/nudge/preHomeCur.png" style="width: 34%; height: 34%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/preHomeCur.png" style="width: 34%; height: 34%;" alt="" />
             <img class="documentImage" src="../images/webDev/nudge/preHomeNewL.png" style="width: 30%; height: 30%;" alt="IMAGES" />
             <img class="documentImage" src="../images/webDev/nudge/preHomeNewD.png" style="width: 30%; height: 30%;" alt="IMAGES" />
         </div>
@@ -1961,5 +1961,5 @@ export const gameDevItems = [
         img: "../images/gameDev/PuckDefenders.png",
         status: "Completed",
         documentation:``
-    }
+    },
 ]

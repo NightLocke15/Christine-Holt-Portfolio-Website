@@ -212,8 +212,9 @@ footer {
         background-color: #2a2b2a;
         box-shadow: -3px 3px 3px #191a19;
         position: absolute;
-        top: 4rem;
+        top: 0;
         left: 0;
+        padding-top: 3rem;
         transition: all ease-in-out 0.3s;
         display: flex;
         flex-direction: column;
