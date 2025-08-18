@@ -1112,52 +1112,395 @@ Codedamn News. 20 March. Available at: <a class="refLink" href="https://codedamn
 
 export const gameDevItems = [
     {
-        id: "0",
-        name: "Puck Defenders",
+        id: "7",
+        name: "Weight Prototype",
         github: "https://github.com/NightLocke15/Christine-Holt-Portfolio-Website",
-        itch: "https://chris-the-awkward-elf.itch.io/puck-defenders",
-        img: "../images/gameDev/PuckDefenders.png",
-        status: "Completed"
-    },
-    {
-        id: "1",
-        name: "Arena Bash",
-        github: "https://github.com/NightLocke15/Christine-Holt-Portfolio-Website",
-        itch: "https://chris-the-awkward-elf.itch.io/arena-bash",
-        img: "../images/gameDev/ArenaBash.png",
-        status: "Completed"
-    },
-    {
-        id: "2",
-        name: "Splatris",
-        github: "https://github.com/NightLocke15/Christine-Holt-Portfolio-Website",
-        itch: "https://chris-the-awkward-elf.itch.io/splatris",
-        img: "../images/gameDev/Splatris.png",
-        status: "Completed"
-    },
-    {
-        id: "3",
-        name: "A Day in The Life of A Student",
-        github: "https://github.com/NightLocke15/Christine-Holt-Portfolio-Website",
-        itch: "https://chris-the-awkward-elf.itch.io/a-day-in-the-life-of-a-student",
-        img: "../images/gameDev/StudentLife.png",
-        status: "Completed"
-    },
-    {
-        id: "4",
-        name: "Potato CULTivator (PotatoType)",
-        github: "https://github.com/NightLocke15/Christine-Holt-Portfolio-Website",
-        itch: "https://chris-the-awkward-elf.itch.io/idle-potatotype",
-        img: "../images/gameDev/PotatoType.png",
-        status: "Completed"
-    },
-    {
-        id: "5",
-        name: "Platformer Juicyness Simulator",
-        github: "https://github.com/NightLocke15/Christine-Holt-Portfolio-Website",
-        itch: "https://chris-the-awkward-elf.itch.io/platformer-juicyness-simulator",
-        img: "../images/gameDev/PlatformerJuice.png",
-        status: "Completed"
+        itch: "https://chris-the-awkward-elf.itch.io/weight-prototype",
+        img: "../images/gameDev/WeightProto.png",
+        status: "Completed",
+        documentation: `
+        <h3>Prompt</h3>
+        <p class="listItem">Weight</p>
+        <h3>Intent</h3>
+        <p class="paragraph">For this project, we were tasked with taking the prompt and experimenting. We were tasked with expressing the intent of the project and the reflecting on our process.</p>
+        <p class="paragraph">I want to be able to use physics in Unity to build my prototype. However, the physics system
+        in Unity I find difficult to understand. Thus, I want to attempt to build a simple system that
+        simulates physics. To do this, I want to create a mechanic where an object is elevated and
+        lowered by adding objects that can incrementally lift and drop the object depending on the
+        added element.</p>
+        <p class="paragraph">Why do I find the Physics system difficult to understand?</p>
+        <p class="listItem">There are several elements in the physics components in the editor itself, that I do not
+        understand, either because I do not know how they work, or the terminology used to
+        describe them is not intuitive to me. Some terms for example, Linear drag, angular
+        drag, max linear correction, max angular correction, Baumgarte scale, sleep
+        tolerance., etc.</p>
+        <p class="paragraph">There were two ways I thought of to approach the above problem. Either I learn how to use
+        the system (which is intimidating), or I ‘fake’ it in a sense, by using elements in the editor
+        that I do understand, as well as code I do understand. The latter is what I am attempting to do.</p>
+        <p class="paragraph">How will I be using the mechanic to attempt to do this?</p>
+        <p class="listItem">By using the Unity grid that is visible in Unity2D as a large graph.</p>
+        <p class="listItem">By using the object’s position on the graph to determine where it is in the space I am
+        building, and then simulate floating and falling using vectors in code.</p>
+        <p class="listItem">By using different elements (balloons, weights, parachutes, etc.) to lift the object,
+        lower the object or slow the object’s descent.</p>
+        <p class="listItem sub">These elements will all have certain properties in their code to achieve this.</p>
+        <h3>Reflection</h3>
+        <p class="paragraph">While making this prototype I was able to ‘fake’ the physics – build my own physics system
+        – to a certain point. What I mean by this is that I could take certain elements and make them
+        work similarly to what I think Unity Physics would be able to do, just in code, but after a
+        certain point, it does not come off as realistic anymore.</p>
+        <p class="paragraph">This is something that became obvious to me when I had the prototype play tested a few
+        times by some of my peers. One of the glaring problems I had was making it look like the
+        character was floating up and not just going up in position. I got an effect that was close, by
+        slowly moving the character up when they were lifted by the balloon and drop faster when
+        they are holding a weight.</p>
+        <p class="paragraph">Something the players noted (and this is something I had realised as well), is that the fact that
+        the character goes up or down a consistent amount, makes it feel unrealistic. I was struggling
+        with this, as at first. In my head that is how it would work, and I do not think this is
+        necessarily wrong, but I think if I had found a way to implement it differently, it would have
+        come across more realistic. Maybe by making the character ‘look’ floatier. I could approach
+        this through animations, or even use the code I already have to make the character slightly
+        move up and down as they move along.</p>
+        <p class="paragraph">So, when referring to the physics itself, I think it was successful to an extent. The ‘gravity’
+        works; the character falls when there is no balloon attached or when it walks off a platform,
+        even though there is no gravity attached to it in Unity. The character ‘floats’ or goes up when
+        a floating device is added and goes down when the character’s weight is increased. However,
+        it does not feel realistic. It does not feel as if the character has any weight to it. It feels like
+        the character is an image that is changing positions on a graph. Which is what it is doing, but
+        I was trying to make it look like it was using realistic physics, and I do not feel as if this was
+        all that successful.</p>
+        <p class="paragraph">If I were to go back, I would have looked at the following to make changes to, as to make it
+        look more realistic in movement:</p>
+        <p class="listItem">I would test implementing what Player 2 had mentioned in the playtest below; to
+        decrease the speed that the character is moving at over time when it floats up.</p>
+        <p class="listItem">I would experiment with giving the character itself weight, and see how that would
+        change things, and if that would make it more realistic.</p>
+        <p class="listItem sub">I would probably make a change in how I approached the problem of
+        movement (vertical and horizontal) completely. I would have to do more
+        research on this.</p>
+        <p class="listItem">I would go back to the code used in the prototype to see if there was anything I could
+        do differently or change to have make it look more realistic in game and make it
+        easier to adjust if needed.</p>
+        <p class="listItem">I would put more time into the graphics, in the sense that I think some of my above
+        problems could be remedied by adding some small animations.</p>
+        <p class="paragraph">Moving on to the other aspect I ended up also testing, the graphics. I was trying to use
+        graphics to solidify the feeling and intent of the physics system.</p>
+        <p class="paragraph">In my first prototype, I only used iconography. I made it look like one balloon when one
+        balloon was used, and made it look like many balloons when there was more. I was surprised
+        to see how effective the iconography ended up being. The players almost immediately knew
+        what each element was supposed to do, and they said that when the graphic elements were
+        added, it did clearly communicate what the element was supposed to do.</p>
+        <p class="paragraph">In the second prototype, instead of using graphics that showed more balloons when more
+        balloons were used, I used colours on the balloons to indicate something similar. The colours
+        were changing as the lifting force got stronger. So, instead of many balloons, it was a stronger
+        balloon, and this was indicated by the balloon getting redder as it got stronger. I made the
+        prototype with the coloured balloons to evaluate a separate way of indicating the same thing,
+        because maybe I would be surprised, and it would work better than just the graphics. I was,
+        however, not surprised when this ended up being less effective than the iconography.</p>
+        <p class="paragraph">The comment I got the most was that it was not clear what it was indicating, and the colour
+        palette change was jarring. So, in the prototype I submitted, I opted for just submitting the
+        first one with just the graphics, as the colours just did not land at all.</p>
+        <p class="paragraph">In conclusion, I think it is possible for me to fake physics, or make my own physics system,
+        but it is something I would have to work on further. The system I built is not where it should
+        or can be and needs a lot more work. The basics are there, which is helpful, and I learned a lot
+        about how it is possible to go around set systems in Unity and go down your own path.
+        However, it was not as successful as I hoped it would be. I do not think it is a lost cause, and
+        with some work, I might be able to have a system that would mean I never have to use Unity
+        physics again, but for now, I do not have this magical system that I not only understand but
+        achieves the same look and feel that Unity physics gives.</p>
+        <p class="paragraph">But I did learn, however, that art in games does not have to be all that complicated.
+        Sometimes simple iconography works and communicates the same thing that complex art
+        does. Using only icons could even make a game that is fun and interesting to look at. Now, I
+        do not think my art in this prototype is perfect. I think if there were a few animations when
+        the character walked, or floated, or fell, it would look even more alive. For what I set out to
+        do with the art in the prototype, however, I think it was successful, and I had fun making it.
+        <p class="paragraph">Further expansion on how I approached my prototyping as well as my findings can be found
+        below.</p>
+        <h3>What I did:</h3>
+        <p class="listItem">I started by writing down my idea for the mechanic and sketching some designs so I
+        could see what I was aiming for. This enabled me to visualise what I wanted to do
+        before jumping in and making the prototype.</p>
+        <img class="documentImage" src="../images/gameDev/weight/Weight1.png" alt="IMAGES" />
+        <p class="listItem">I then set aside around 3 hours to work on an initial prototype so I can see what it
+        would look like and whether this would even work. I was keeping the article we read
+        for the first week, How to Prototype a Game in Under 7 Days (Kucic, 2005), as well
+        as what was said in class, so I was trying my hand at pushing out a prototype in a
+        really short period of time as to not lose too much work if it didn’t work.</p>
+        <p class="listItem">After the three hours I had three levels showing the three elements I mention above;
+        doing what I wanted them to do for the most part. The code at this point is messy and
+        all over the place, and it still needed work.</p>
+        <p class="listItem">I had added some simple graphics to the game so what is happing within the prototype
+        is also showcased in the graphics.</p>
+        <p class="listItem">I then went back into the code to clean it up, make it simpler and easier for me to
+        understand (especially if I were to come back to it in the future).</p>
+        <p class="listItem">The first version used too many game objects to achieve the floating and falling
+        effects.</p>
+        <p class="listItem">The character itself had gravity on it in the rigid body, meaning that it was falling
+        when it should not have and not floating in the manner, I wanted it to. So, I tried to fix
+        this by adding the squares, and adding the floating and falling code to the square,
+        which did not use gravity.</p>
+        <p class="listItem">To illustrate:</p>
+        <img class="documentImage" src="../images/gameDev/weight/Weight2.png"  alt="IMAGES" />
+        <p class="listItem">I went back into unity, removed the squares, and just took off the gravity on the
+        character itself. After doing this, the character was moving the way I wanted it too
+        originally.</p>
+        <p class="listItem">The game object setup now looks more like this:</p>
+        <img class="documentImage" src="../images/gameDev/weight/Weight3.png"  alt="IMAGES" />
+        <p class="listItem">The code is a lot neater than it was before, and the movement of the character is
+        smoother.</p>
+        <p class="listItem">After this, I started balancing the numbers of different elements on each object
+        (balloon, parachute, etc.). The elements consist of the weight of the object (whether
+        the object is lighter and will lift the character, or heavier, dropping the character), as
+        well as speed (how the object effects the speed the character is moving in the
+        horizontal direction).</p>
+        <p class="listItem">The code could still use some work, I think there is still a lot to be improved, as I do
+        not think where it is at now is the most effective or flexible for what I need it to do,
+        but for now it works as it is.</p>
+        <p class="listItem">Some terms to be found in the spread sheets:</p>
+        <p class="listItem sub"><u>Weight:</u> This is what indicates how much the character floats up and how
+        much the character lowers, depending on the element that is added.</p>
+        <p class="listItem sub"><u>Speed:</u> This is how much the element effects the speed of the character
+        moving upwards or downwards.</p>
+        <p class="listItem sub"><u>Hinderance to movement:</u> how much an element hinders the horizontal
+        movement of the character. For example, the weight that makes the character
+        move slower when it goes left or right.</p>
+        <p class="listItem sub"><u>Base speed of Character:</u> the speed of the character moving horizontally when
+        no element is added.</p>
+        <p class="paragraph">This first table contains the arbitrary
+            numbers that I worked with
+            while figuring out the system
+            itself. They did not have much
+            of a visual effect, so they need
+            to be adjusted.</p>
+        <table>
+        <tr>
+        <th>Term</th>
+        <th>Balloon</th>
+        <th>Big Balloon</th>
+        <th>Parachute</th>
+        <th>Weight (object)</th>
+        </tr>
+        <tr>
+        <th>Weight</th>
+        <td>2</td>
+        <td>3</td>
+        <td>0</td>
+        <td>-1</td>
+        </tr>
+        <tr>
+        <th>Speed</th>
+        <td>0.5</td>
+        <td>0.5</td>
+        <td>0.5</td>
+        <td>1.5</td>
+        </tr>
+        <tr>
+        <th>Hinderence to Movement</th>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        </tr>
+        </table>
+        <p class="paragraph">The next table shows better numbers, the speeds
+        made more sense, and made
+        the floating and the dropping
+        look more realistic. The speed
+        the weight is moving the
+        character down at is a bit fast
+        for my liking though. After playtesting I was
+        advised that if I wanted the
+        character to "feel" heavier,
+        there should also be a
+        hindrance to the vertical
+        movement of the character.
+        The Parachute hinderance is a
+        bit much though.</p>
+        <table>
+        <tr>
+        <th>Term</th>
+        <th>Balloon</th>
+        <th>Big Balloon</th>
+        <th>Parachute</th>
+        <th>Weight (object)</th>
+        </tr>
+        <tr>
+        <th>Weight</th>
+        <td>1.3</td>
+        <td>3.9</td>
+        <td>0</td>
+        <td>-0.6</td>
+        </tr>
+        <tr>
+        <th>Speed</th>
+        <td>0.2</td>
+        <td>0.2</td>
+        <td>0.3</td>
+        <td>2</td>
+        </tr>
+        <tr>
+        <th>Hinderence to Movement</th>
+        <td>0</td>
+        <td>0</td>
+        <td>0.5</td>
+        <td>0.5</td>
+        </tr>
+        </table>
+        <p class="paragraph">The speed of the weight was
+        too fast. It looked a little out
+        of place. The hinderance to the
+        movement of the character in
+        a vertical sense was too great
+        with the parachute, so I made
+        some adjustments to it.</p>
+        <table>
+        <tr>
+        <th>Term</th>
+        <th>Balloon</th>
+        <th>Big Balloon</th>
+        <th>Parachute</th>
+        <th>Weight (object)</th>
+        </tr>
+        <tr>
+        <th>Weight</th>
+        <td>1.3</td>
+        <td>3.9</td>
+        <td>0</td>
+        <td>-0.6</td>
+        </tr>
+        <tr>
+        <th>Speed</th>
+        <td>0.2</td>
+        <td>0.2</td>
+        <td>0.3</td>
+        <td>1.5</td>
+        </tr>
+        <tr>
+        <th>Hinderence to Movement</th>
+        <td>0</td>
+        <td>0</td>
+        <td>0.7</td>
+        <td>0.5</td>
+        </tr>
+        </table>
+        <table>
+        <tr>
+        <th>Base Speed of character horizontal movement</th>
+        <td>3</td>
+        <td>This was too slow. With the changes in the above numbers, this
+        needs to be adjusted so that the above numbers have a more obvious
+        effect.</td>
+        </tr>
+        <tr>
+        <th>Base Speed of character horizontal movement</th>
+        <td>5</td>
+        <td>This was better. The speed meant that the adjusted numbers above
+        had a more evident effect and made 'floating' look more like
+        floating, as well as falling more like falling.</td>
+        </tr>
+        </table>
+        <p class="listItem">After working on the code, I started thinking about how I can communicate the
+        character’s movement and how they are moving in other ways, other than just the
+        speed the character is moving at.</p>
+        <p class="listItem">The first thing I decided was to go with iconography as my graphics in the prototype.
+        I did this because it is easy to produce quickly and change if necessary. I did not feel
+        like the prototype needed complicated art, as it is just that, a prototype, but it did need
+        graphics that still clearly communicated what each element was doing. This is
+        achievable with simple shapes if you do it right.</p>
+        <p class="listItem">I decided to concentrate on the balloons in following testing, as they have the most
+        effect on the movement in this prototype.</p>
+        <p class="listItem">I thought of two ways:</p>
+        <p class="listItem sub">Graphics showing the amount and size of the balloons lifting the character.</p>
+        <img class="documentImage" src="../images/gameDev/weight/Weight4.png"  alt="IMAGES" />
+        <p class="listItem sub">Distinct colours of the balloons indicating how far up they are taking the
+        character.</p>
+        <img class="documentImage" src="../images/gameDev/weight/Weight5.png"  alt="IMAGES" />
+        <p class="listItem">I asked a few people to playtest the two different prototypes and asked them a few
+        questions about the graphics and the movement in the prototype.</p>
+        <h3>Playtests</h3>
+        <p class="paragraph">I asked three people to playtest the game. I asked them questions about the mechanic itself, as
+        well as the two types of graphics used. The answers below are paraphrased from what they
+        told me when I asked them the questions.</p>
+        <p class="paragraph"><u>Player 1:</u></p>
+        <p class="paragraph"><i>Was the amount of information given enough for you to figure out what you had to do?
+        Why or why not?</i></p>
+        <p class="paragraph">This player made it clear that the UI elements were both intuitive and not intuitive. There is
+        no indication of where to go in each level. They suggested indicating a goal.</p>
+        <p class="paragraph"><i>Was the graphics from prototype one or two better at communicating the effect of each
+        element on the character?</i></p>
+        <p class="paragraph">The parachute was not as clear in the first two levels as it was not necessary to use it. They
+        suggested making a level with just the parachute in use. The balloons, however, were clear in
+        the first prototype. They showed what they were supposed to achieve, and how quickly or
+        how much. The second prototype with the colours, however, did not convey the same
+        information as effectively. They feel that the prototype with just the graphics is better.</p>
+        <p class="paragraph"><i>Does the character feel light when it needs to feel light and heavy when it needs to feel
+        heavy? Why or why not?</i></p>
+        <p class="paragraph">The character does not really 'feel' lighter or heavier. It is just moving up and down according
+        to the 'weight' of the elements used. Something that could remedy this, is to make the
+        character move slower in the horizontal direction as well, when they are carrying weight or
+        using the parachute.</p>
+        <p class="paragraph"><i>Is there anything you would have approached differently? What and how?</i></p>
+        <p class="paragraph">Would have done something to make it feel 'heavier'. Examples, the character comes down
+        faster, the character moves slower when walking if they hold a weight. Another thing would
+        be to change the position of the graphics of the balloons, so it is clearer when more than one
+        balloon type is used.</p>
+        <p class="paragraph">After this first playtest, I made a few small adjustments before the following playtests.</p>
+        <p class="listItem">I adjusted some of the numbers in the code that adjusted the speeds and weights.</p>
+        <p class="listItem">I added a variable that slows the movement of the character when moving
+        horizontally if the character is carrying weights.</p>
+        <p class="listItem">And organised the UI elements in a different manner.</p>
+        <p class="paragraph"><u>Player 2:</u></p>
+        <p class="paragraph"><i>Was the amount of information given enough for you to figure out what you had to do?
+        Why or why not?</i></p>
+        <p class="paragraph">This player said that the balloons made it obvious what the goal of the element was but did
+        not feel the same about the weight and the big ballon. They felt that these were not as clear in
+        their intentions as they had no indication of how many are being used.</p>
+        <p class="paragraph"><i>Was the graphics from prototype one or two better at communicating the effect of each
+        element on the character?</i></p>
+        <p class="paragraph">They felt as if the way the graphics in the first prototype were remarkably effective. The
+        balloons with the stretched-out strings made it look like a helium balloon that is supposed to
+        be lifting something. To them this came instinctually. The prototype with the colours was less
+        clear. They understood that the higher the balloons went, the colour changed, however, this
+        was not clear. They expressed that this would probably not be clear without further indication
+        as to what it is supposed to mean. They also felt that the colour in the second prototype was
+        jarring, compared to the first one where all the graphics were unified, as they were colourless
+        and just icons.</p>
+        <p class="paragraph"><i>Does the character feel light when it needs to feel light and heavy when it needs to feel
+        heavy? Why or why not?</i></p>
+        <p class="paragraph">The weight of the character feels constant as opposed to floaty or like it was falling. It feels
+        universal as the character moves up and down certain amounts, and it does not really show
+        how gravity effects the objects in the way people would expect. It does not feel realistic in
+        that sense.</p>
+        <p class="paragraph"><i>Is there anything you would have approached differently? What and how?</i></p>
+        <p class="paragraph">This player would change the way the character moves up. It would start going up at a certain
+        speed, and then slowly decelerate as the character approaches the goal height.</p>
+        <p class="paragraph">This playtest brough forth a few good suggestions, that if I had more time to spend on the
+        prototype, I would have tried my best to implements it. For example:</p>
+        <p class="listItem">Maybe having the speed that the character floats up at decrease over time.</p>
+        <p class="listItem">This might make it feel a bit more realistic.</p>
+        <p class="paragraph"><u>Player 3:</u></p>
+        <p class="paragraph"><i>Was the amount of information given enough for you to figure out what you had to do?
+        Why or why not?</i></p>
+        <p class="paragraph">This player said that the intentions of the prototype and the goal of the level was clear to
+        them, possibly because they are someone who plays games on a regular. However, if it was
+        someone who does not play games often, they might not find it intuitive.
+        <p class="paragraph"><i>Was the graphics from prototype one or two better at communicating the effect of each
+        element on the character?</i></p>
+        <p class="paragraph">They felt that there was an unclear limit to how many balloons can be used, as the graphics
+        for four balloons and the graphics for more balloons is the same. After playing around it
+        became clear that there is no limit, but this was not clear from the beginning. The colour
+        prototype made no sense however, and they preferred the first prototype with just the
+        graphics.</p>
+        <p class="paragraph"><i>Does the character feel light when it needs to feel light and heavy when it needs to feel
+        heavy? Why or why not?</i></p>
+        <p class="paragraph">It feels like the character is moving up and down in 'layers'. At a consistent amount. It does
+        not feel floaty like a balloon should.</p>
+        <p class="paragraph"><i>Is there anything you would have approached differently? What and how?</i></p>
+        <p class="paragraph">There was not anything the player felt they would have done differently at this point.</p>
+        <h3>References: </h3>
+        <p class="paragraph">Kucic, M. (2005) How to Prototype a Game in Under 7 Days. [Online]. Available at:
+        <a class="refLink" href="https://www.gamedeveloper.com/game-platforms/how-to-prototype-a-game-in-under-7-days#close-modal" target="_blank">
+        https://www.gamedeveloper.com/game-platforms/how-to-prototype-a-game-in-under-7-days#close-modal</a> [Accessed on: 12 February 2024]</p>`
     },
     {
         id: "6",
@@ -1566,394 +1909,57 @@ export const gameDevItems = [
         <p class="paragraph">Pikwip. (2022) PC [Game]. cookiecrayon. [Available at: <a class="refLink" href="https://cookiecrayon.itch.io/pikwip">https://cookiecrayon.itch.io/pikwip</a>]</p>`,
     },
     {
-        id: "7",
-        name: "Weight Prototype",
+        id: "5",
+        name: "Platformer Juicyness Simulator",
         github: "https://github.com/NightLocke15/Christine-Holt-Portfolio-Website",
-        itch: "https://chris-the-awkward-elf.itch.io/weight-prototype",
-        img: "../images/gameDev/WeightProto.png",
+        itch: "https://chris-the-awkward-elf.itch.io/platformer-juicyness-simulator",
+        img: "../images/gameDev/PlatformerJuice.png",
         status: "Completed",
-        documentation: `
-        <h3>Prompt</h3>
-        <p class="listItem">Weight</p>
-        <h3>Intent</h3>
-        <p class="paragraph">For this project, we were tasked with taking the prompt and experimenting. We were tasked with expressing the intent of the project and the reflecting on our process.</p>
-        <p class="paragraph">I want to be able to use physics in Unity to build my prototype. However, the physics system
-        in Unity I find difficult to understand. Thus, I want to attempt to build a simple system that
-        simulates physics. To do this, I want to create a mechanic where an object is elevated and
-        lowered by adding objects that can incrementally lift and drop the object depending on the
-        added element.</p>
-        <p class="paragraph">Why do I find the Physics system difficult to understand?</p>
-        <p class="listItem">There are several elements in the physics components in the editor itself, that I do not
-        understand, either because I do not know how they work, or the terminology used to
-        describe them is not intuitive to me. Some terms for example, Linear drag, angular
-        drag, max linear correction, max angular correction, Baumgarte scale, sleep
-        tolerance., etc.</p>
-        <p class="paragraph">There were two ways I thought of to approach the above problem. Either I learn how to use
-        the system (which is intimidating), or I ‘fake’ it in a sense, by using elements in the editor
-        that I do understand, as well as code I do understand. The latter is what I am attempting to do.</p>
-        <p class="paragraph">How will I be using the mechanic to attempt to do this?</p>
-        <p class="listItem">By using the Unity grid that is visible in Unity2D as a large graph.</p>
-        <p class="listItem">By using the object’s position on the graph to determine where it is in the space I am
-        building, and then simulate floating and falling using vectors in code.</p>
-        <p class="listItem">By using different elements (balloons, weights, parachutes, etc.) to lift the object,
-        lower the object or slow the object’s descent.</p>
-        <p class="listItem sub">These elements will all have certain properties in their code to achieve this.</p>
-        <h3>Reflection</h3>
-        <p class="paragraph">While making this prototype I was able to ‘fake’ the physics – build my own physics system
-        – to a certain point. What I mean by this is that I could take certain elements and make them
-        work similarly to what I think Unity Physics would be able to do, just in code, but after a
-        certain point, it does not come off as realistic anymore.</p>
-        <p class="paragraph">This is something that became obvious to me when I had the prototype play tested a few
-        times by some of my peers. One of the glaring problems I had was making it look like the
-        character was floating up and not just going up in position. I got an effect that was close, by
-        slowly moving the character up when they were lifted by the balloon and drop faster when
-        they are holding a weight.</p>
-        <p class="paragraph">Something the players noted (and this is something I had realised as well), is that the fact that
-        the character goes up or down a consistent amount, makes it feel unrealistic. I was struggling
-        with this, as at first. In my head that is how it would work, and I do not think this is
-        necessarily wrong, but I think if I had found a way to implement it differently, it would have
-        come across more realistic. Maybe by making the character ‘look’ floatier. I could approach
-        this through animations, or even use the code I already have to make the character slightly
-        move up and down as they move along.</p>
-        <p class="paragraph">So, when referring to the physics itself, I think it was successful to an extent. The ‘gravity’
-        works; the character falls when there is no balloon attached or when it walks off a platform,
-        even though there is no gravity attached to it in Unity. The character ‘floats’ or goes up when
-        a floating device is added and goes down when the character’s weight is increased. However,
-        it does not feel realistic. It does not feel as if the character has any weight to it. It feels like
-        the character is an image that is changing positions on a graph. Which is what it is doing, but
-        I was trying to make it look like it was using realistic physics, and I do not feel as if this was
-        all that successful.</p>
-        <p class="paragraph">If I were to go back, I would have looked at the following to make changes to, as to make it
-        look more realistic in movement:</p>
-        <p class="listItem">I would test implementing what Player 2 had mentioned in the playtest below; to
-        decrease the speed that the character is moving at over time when it floats up.</p>
-        <p class="listItem">I would experiment with giving the character itself weight, and see how that would
-        change things, and if that would make it more realistic.</p>
-        <p class="listItem sub">I would probably make a change in how I approached the problem of
-        movement (vertical and horizontal) completely. I would have to do more
-        research on this.</p>
-        <p class="listItem">I would go back to the code used in the prototype to see if there was anything I could
-        do differently or change to have make it look more realistic in game and make it
-        easier to adjust if needed.</p>
-        <p class="listItem">I would put more time into the graphics, in the sense that I think some of my above
-        problems could be remedied by adding some small animations.</p>
-        <p class="paragraph">Moving on to the other aspect I ended up also testing, the graphics. I was trying to use
-        graphics to solidify the feeling and intent of the physics system.</p>
-        <p class="paragraph">In my first prototype, I only used iconography. I made it look like one balloon when one
-        balloon was used, and made it look like many balloons when there was more. I was surprised
-        to see how effective the iconography ended up being. The players almost immediately knew
-        what each element was supposed to do, and they said that when the graphic elements were
-        added, it did clearly communicate what the element was supposed to do.</p>
-        <p class="paragraph">In the second prototype, instead of using graphics that showed more balloons when more
-        balloons were used, I used colours on the balloons to indicate something similar. The colours
-        were changing as the lifting force got stronger. So, instead of many balloons, it was a stronger
-        balloon, and this was indicated by the balloon getting redder as it got stronger. I made the
-        prototype with the coloured balloons to evaluate a separate way of indicating the same thing,
-        because maybe I would be surprised, and it would work better than just the graphics. I was,
-        however, not surprised when this ended up being less effective than the iconography.</p>
-        <p class="paragraph">The comment I got the most was that it was not clear what it was indicating, and the colour
-        palette change was jarring. So, in the prototype I submitted, I opted for just submitting the
-        first one with just the graphics, as the colours just did not land at all.</p>
-        <p class="paragraph">In conclusion, I think it is possible for me to fake physics, or make my own physics system,
-        but it is something I would have to work on further. The system I built is not where it should
-        or can be and needs a lot more work. The basics are there, which is helpful, and I learned a lot
-        about how it is possible to go around set systems in Unity and go down your own path.
-        However, it was not as successful as I hoped it would be. I do not think it is a lost cause, and
-        with some work, I might be able to have a system that would mean I never have to use Unity
-        physics again, but for now, I do not have this magical system that I not only understand but
-        achieves the same look and feel that Unity physics gives.</p>
-        <p class="paragraph">But I did learn, however, that art in games does not have to be all that complicated.
-        Sometimes simple iconography works and communicates the same thing that complex art
-        does. Using only icons could even make a game that is fun and interesting to look at. Now, I
-        do not think my art in this prototype is perfect. I think if there were a few animations when
-        the character walked, or floated, or fell, it would look even more alive. For what I set out to
-        do with the art in the prototype, however, I think it was successful, and I had fun making it.
-        <p class="paragraph">Further expansion on how I approached my prototyping as well as my findings can be found
-        below.</p>
-        <h3>What I did:</h3>
-        <p class="listItem">I started by writing down my idea for the mechanic and sketching some designs so I
-        could see what I was aiming for. This enabled me to visualise what I wanted to do
-        before jumping in and making the prototype.</p>
-        <img class="documentImage" src="../images/gameDev/weight/Weight1.png" alt="IMAGES" />
-        <p class="listItem">I then set aside around 3 hours to work on an initial prototype so I can see what it
-        would look like and whether this would even work. I was keeping the article we read
-        for the first week, How to Prototype a Game in Under 7 Days (Kucic, 2005), as well
-        as what was said in class, so I was trying my hand at pushing out a prototype in a
-        really short period of time as to not lose too much work if it didn’t work.</p>
-        <p class="listItem">After the three hours I had three levels showing the three elements I mention above;
-        doing what I wanted them to do for the most part. The code at this point is messy and
-        all over the place, and it still needed work.</p>
-        <p class="listItem">I had added some simple graphics to the game so what is happing within the prototype
-        is also showcased in the graphics.</p>
-        <p class="listItem">I then went back into the code to clean it up, make it simpler and easier for me to
-        understand (especially if I were to come back to it in the future).</p>
-        <p class="listItem">The first version used too many game objects to achieve the floating and falling
-        effects.</p>
-        <p class="listItem">The character itself had gravity on it in the rigid body, meaning that it was falling
-        when it should not have and not floating in the manner, I wanted it to. So, I tried to fix
-        this by adding the squares, and adding the floating and falling code to the square,
-        which did not use gravity.</p>
-        <p class="listItem">To illustrate:</p>
-        <img class="documentImage" src="../images/gameDev/weight/Weight2.png"  alt="IMAGES" />
-        <p class="listItem">I went back into unity, removed the squares, and just took off the gravity on the
-        character itself. After doing this, the character was moving the way I wanted it too
-        originally.</p>
-        <p class="listItem">The game object setup now looks more like this:</p>
-        <img class="documentImage" src="../images/gameDev/weight/Weight3.png"  alt="IMAGES" />
-        <p class="listItem">The code is a lot neater than it was before, and the movement of the character is
-        smoother.</p>
-        <p class="listItem">After this, I started balancing the numbers of different elements on each object
-        (balloon, parachute, etc.). The elements consist of the weight of the object (whether
-        the object is lighter and will lift the character, or heavier, dropping the character), as
-        well as speed (how the object effects the speed the character is moving in the
-        horizontal direction).</p>
-        <p class="listItem">The code could still use some work, I think there is still a lot to be improved, as I do
-        not think where it is at now is the most effective or flexible for what I need it to do,
-        but for now it works as it is.</p>
-        <p class="listItem">Some terms to be found in the spread sheets:</p>
-        <p class="listItem sub"><u>Weight:</u> This is what indicates how much the character floats up and how
-        much the character lowers, depending on the element that is added.</p>
-        <p class="listItem sub"><u>Speed:</u> This is how much the element effects the speed of the character
-        moving upwards or downwards.</p>
-        <p class="listItem sub"><u>Hinderance to movement:</u> how much an element hinders the horizontal
-        movement of the character. For example, the weight that makes the character
-        move slower when it goes left or right.</p>
-        <p class="listItem sub"><u>Base speed of Character:</u> the speed of the character moving horizontally when
-        no element is added.</p>
-        <p class="paragraph">This first table contains the arbitrary
-            numbers that I worked with
-            while figuring out the system
-            itself. They did not have much
-            of a visual effect, so they need
-            to be adjusted.</p>
-        <table>
-        <tr>
-        <th>Term</th>
-        <th>Balloon</th>
-        <th>Big Balloon</th>
-        <th>Parachute</th>
-        <th>Weight (object)</th>
-        </tr>
-        <tr>
-        <th>Weight</th>
-        <td>2</td>
-        <td>3</td>
-        <td>0</td>
-        <td>-1</td>
-        </tr>
-        <tr>
-        <th>Speed</th>
-        <td>0.5</td>
-        <td>0.5</td>
-        <td>0.5</td>
-        <td>1.5</td>
-        </tr>
-        <tr>
-        <th>Hinderence to Movement</th>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        </tr>
-        </table>
-        <p class="paragraph">The next table shows better numbers, the speeds
-        made more sense, and made
-        the floating and the dropping
-        look more realistic. The speed
-        the weight is moving the
-        character down at is a bit fast
-        for my liking though. After playtesting I was
-        advised that if I wanted the
-        character to "feel" heavier,
-        there should also be a
-        hindrance to the vertical
-        movement of the character.
-        The Parachute hinderance is a
-        bit much though.</p>
-        <table>
-        <tr>
-        <th>Term</th>
-        <th>Balloon</th>
-        <th>Big Balloon</th>
-        <th>Parachute</th>
-        <th>Weight (object)</th>
-        </tr>
-        <tr>
-        <th>Weight</th>
-        <td>1.3</td>
-        <td>3.9</td>
-        <td>0</td>
-        <td>-0.6</td>
-        </tr>
-        <tr>
-        <th>Speed</th>
-        <td>0.2</td>
-        <td>0.2</td>
-        <td>0.3</td>
-        <td>2</td>
-        </tr>
-        <tr>
-        <th>Hinderence to Movement</th>
-        <td>0</td>
-        <td>0</td>
-        <td>0.5</td>
-        <td>0.5</td>
-        </tr>
-        </table>
-        <p class="paragraph">The speed of the weight was
-        too fast. It looked a little out
-        of place. The hinderance to the
-        movement of the character in
-        a vertical sense was too great
-        with the parachute, so I made
-        some adjustments to it.</p>
-        <table>
-        <tr>
-        <th>Term</th>
-        <th>Balloon</th>
-        <th>Big Balloon</th>
-        <th>Parachute</th>
-        <th>Weight (object)</th>
-        </tr>
-        <tr>
-        <th>Weight</th>
-        <td>1.3</td>
-        <td>3.9</td>
-        <td>0</td>
-        <td>-0.6</td>
-        </tr>
-        <tr>
-        <th>Speed</th>
-        <td>0.2</td>
-        <td>0.2</td>
-        <td>0.3</td>
-        <td>1.5</td>
-        </tr>
-        <tr>
-        <th>Hinderence to Movement</th>
-        <td>0</td>
-        <td>0</td>
-        <td>0.7</td>
-        <td>0.5</td>
-        </tr>
-        </table>
-        <table>
-        <tr>
-        <th>Base Speed of character horizontal movement</th>
-        <td>3</td>
-        <td>This was too slow. With the changes in the above numbers, this
-        needs to be adjusted so that the above numbers have a more obvious
-        effect.</td>
-        </tr>
-        <tr>
-        <th>Base Speed of character horizontal movement</th>
-        <td>5</td>
-        <td>This was better. The speed meant that the adjusted numbers above
-        had a more evident effect and made 'floating' look more like
-        floating, as well as falling more like falling.</td>
-        </tr>
-        </table>
-        <p class="listItem">After working on the code, I started thinking about how I can communicate the
-        character’s movement and how they are moving in other ways, other than just the
-        speed the character is moving at.</p>
-        <p class="listItem">The first thing I decided was to go with iconography as my graphics in the prototype.
-        I did this because it is easy to produce quickly and change if necessary. I did not feel
-        like the prototype needed complicated art, as it is just that, a prototype, but it did need
-        graphics that still clearly communicated what each element was doing. This is
-        achievable with simple shapes if you do it right.</p>
-        <p class="listItem">I decided to concentrate on the balloons in following testing, as they have the most
-        effect on the movement in this prototype.</p>
-        <p class="listItem">I thought of two ways:</p>
-        <p class="listItem sub">Graphics showing the amount and size of the balloons lifting the character.</p>
-        <img class="documentImage" src="../images/gameDev/weight/Weight4.png"  alt="IMAGES" />
-        <p class="listItem sub">Distinct colours of the balloons indicating how far up they are taking the
-        character.</p>
-        <img class="documentImage" src="../images/gameDev/weight/Weight5.png"  alt="IMAGES" />
-        <p class="listItem">I asked a few people to playtest the two different prototypes and asked them a few
-        questions about the graphics and the movement in the prototype.</p>
-        <h3>Playtests</h3>
-        <p class="paragraph">I asked three people to playtest the game. I asked them questions about the mechanic itself, as
-        well as the two types of graphics used. The answers below are paraphrased from what they
-        told me when I asked them the questions.</p>
-        <p class="paragraph"><u>Player 1:</u></p>
-        <p class="paragraph"><i>Was the amount of information given enough for you to figure out what you had to do?
-        Why or why not?</i></p>
-        <p class="paragraph">This player made it clear that the UI elements were both intuitive and not intuitive. There is
-        no indication of where to go in each level. They suggested indicating a goal.</p>
-        <p class="paragraph"><i>Was the graphics from prototype one or two better at communicating the effect of each
-        element on the character?</i></p>
-        <p class="paragraph">The parachute was not as clear in the first two levels as it was not necessary to use it. They
-        suggested making a level with just the parachute in use. The balloons, however, were clear in
-        the first prototype. They showed what they were supposed to achieve, and how quickly or
-        how much. The second prototype with the colours, however, did not convey the same
-        information as effectively. They feel that the prototype with just the graphics is better.</p>
-        <p class="paragraph"><i>Does the character feel light when it needs to feel light and heavy when it needs to feel
-        heavy? Why or why not?</i></p>
-        <p class="paragraph">The character does not really 'feel' lighter or heavier. It is just moving up and down according
-        to the 'weight' of the elements used. Something that could remedy this, is to make the
-        character move slower in the horizontal direction as well, when they are carrying weight or
-        using the parachute.</p>
-        <p class="paragraph"><i>Is there anything you would have approached differently? What and how?</i></p>
-        <p class="paragraph">Would have done something to make it feel 'heavier'. Examples, the character comes down
-        faster, the character moves slower when walking if they hold a weight. Another thing would
-        be to change the position of the graphics of the balloons, so it is clearer when more than one
-        balloon type is used.</p>
-        <p class="paragraph">After this first playtest, I made a few small adjustments before the following playtests.</p>
-        <p class="listItem">I adjusted some of the numbers in the code that adjusted the speeds and weights.</p>
-        <p class="listItem">I added a variable that slows the movement of the character when moving
-        horizontally if the character is carrying weights.</p>
-        <p class="listItem">And organised the UI elements in a different manner.</p>
-        <p class="paragraph"><u>Player 2:</u></p>
-        <p class="paragraph"><i>Was the amount of information given enough for you to figure out what you had to do?
-        Why or why not?</i></p>
-        <p class="paragraph">This player said that the balloons made it obvious what the goal of the element was but did
-        not feel the same about the weight and the big ballon. They felt that these were not as clear in
-        their intentions as they had no indication of how many are being used.</p>
-        <p class="paragraph"><i>Was the graphics from prototype one or two better at communicating the effect of each
-        element on the character?</i></p>
-        <p class="paragraph">They felt as if the way the graphics in the first prototype were remarkably effective. The
-        balloons with the stretched-out strings made it look like a helium balloon that is supposed to
-        be lifting something. To them this came instinctually. The prototype with the colours was less
-        clear. They understood that the higher the balloons went, the colour changed, however, this
-        was not clear. They expressed that this would probably not be clear without further indication
-        as to what it is supposed to mean. They also felt that the colour in the second prototype was
-        jarring, compared to the first one where all the graphics were unified, as they were colourless
-        and just icons.</p>
-        <p class="paragraph"><i>Does the character feel light when it needs to feel light and heavy when it needs to feel
-        heavy? Why or why not?</i></p>
-        <p class="paragraph">The weight of the character feels constant as opposed to floaty or like it was falling. It feels
-        universal as the character moves up and down certain amounts, and it does not really show
-        how gravity effects the objects in the way people would expect. It does not feel realistic in
-        that sense.</p>
-        <p class="paragraph"><i>Is there anything you would have approached differently? What and how?</i></p>
-        <p class="paragraph">This player would change the way the character moves up. It would start going up at a certain
-        speed, and then slowly decelerate as the character approaches the goal height.</p>
-        <p class="paragraph">This playtest brough forth a few good suggestions, that if I had more time to spend on the
-        prototype, I would have tried my best to implements it. For example:</p>
-        <p class="listItem">Maybe having the speed that the character floats up at decrease over time.</p>
-        <p class="listItem">This might make it feel a bit more realistic.</p>
-        <p class="paragraph"><u>Player 3:</u></p>
-        <p class="paragraph"><i>Was the amount of information given enough for you to figure out what you had to do?
-        Why or why not?</i></p>
-        <p class="paragraph">This player said that the intentions of the prototype and the goal of the level was clear to
-        them, possibly because they are someone who plays games on a regular. However, if it was
-        someone who does not play games often, they might not find it intuitive.
-        <p class="paragraph"><i>Was the graphics from prototype one or two better at communicating the effect of each
-        element on the character?</i></p>
-        <p class="paragraph">They felt that there was an unclear limit to how many balloons can be used, as the graphics
-        for four balloons and the graphics for more balloons is the same. After playing around it
-        became clear that there is no limit, but this was not clear from the beginning. The colour
-        prototype made no sense however, and they preferred the first prototype with just the
-        graphics.</p>
-        <p class="paragraph"><i>Does the character feel light when it needs to feel light and heavy when it needs to feel
-        heavy? Why or why not?</i></p>
-        <p class="paragraph">It feels like the character is moving up and down in 'layers'. At a consistent amount. It does
-        not feel floaty like a balloon should.</p>
-        <p class="paragraph"><i>Is there anything you would have approached differently? What and how?</i></p>
-        <p class="paragraph">There was not anything the player felt they would have done differently at this point.</p>
-        <h3>References: </h3>
-        <p class="paragraph">Kucic, M. (2005) How to Prototype a Game in Under 7 Days. [Online]. Available at:
-        <a class="refLink" href="https://www.gamedeveloper.com/game-platforms/how-to-prototype-a-game-in-under-7-days#close-modal" target="_blank">
-        https://www.gamedeveloper.com/game-platforms/how-to-prototype-a-game-in-under-7-days#close-modal</a> [Accessed on: 12 February 2024]</p>`
+        documentation:``
     },
+    {
+        id: "4",
+        name: "Potato CULTivator (PotatoType)",
+        github: "https://github.com/NightLocke15/Christine-Holt-Portfolio-Website",
+        itch: "https://chris-the-awkward-elf.itch.io/idle-potatotype",
+        img: "../images/gameDev/PotatoType.png",
+        status: "Completed",
+        documentation:``
+    },
+    {
+        id: "3",
+        name: "A Day in The Life of A Student",
+        github: "https://github.com/NightLocke15/Christine-Holt-Portfolio-Website",
+        itch: "https://chris-the-awkward-elf.itch.io/a-day-in-the-life-of-a-student",
+        img: "../images/gameDev/StudentLife.png",
+        status: "Completed",
+        documentation:``
+    },
+    {
+        id: "2",
+        name: "Splatris",
+        github: "https://github.com/NightLocke15/Christine-Holt-Portfolio-Website",
+        itch: "https://chris-the-awkward-elf.itch.io/splatris",
+        img: "../images/gameDev/Splatris.png",
+        status: "Completed",
+        documentation:``
+    },
+    {
+        id: "1",
+        name: "Arena Bash",
+        github: "https://github.com/NightLocke15/Christine-Holt-Portfolio-Website",
+        itch: "https://chris-the-awkward-elf.itch.io/arena-bash",
+        img: "../images/gameDev/ArenaBash.png",
+        status: "Completed",
+        documentation:``
+    },
+    {
+        id: "0",
+        name: "Puck Defenders",
+        github: "https://github.com/NightLocke15/Christine-Holt-Portfolio-Website",
+        itch: "https://chris-the-awkward-elf.itch.io/puck-defenders",
+        img: "../images/gameDev/PuckDefenders.png",
+        status: "Completed",
+        documentation:``
+    }
 ]
