@@ -14,6 +14,7 @@ h1 {
 .homepageMainContent {
     display: flex;
     justify-content: center;
+    padding: 0 10rem;
 }
 
 .profilePhotoHolder {
@@ -21,13 +22,13 @@ h1 {
 }
 
 .profilePhoto {
-    width: 25rem;
-    height: 25rem;
-    border-radius: 15rem;
+    width: 55%;
+    height: auto;
+    border-radius: 100%;
     border: 0.3rem solid #F58A07;
     box-shadow: 3px 3px 3px #191a19;
-    margin-left: 25rem;
-    margin-top: 2rem;
+    margin-left: 30%;
+    margin-top: 5%;
 }
 
 .creatorInfo {
@@ -39,7 +40,7 @@ h1 {
               linear-gradient(to right, #F58A07, #F26419) border-box;
     border-radius: 2rem;
     border: 3px solid transparent;
-    width: 40rem;
+    width: 70%;
     font-size: 28px;
     padding: 1rem 2rem;
     border-radius: 2rem;
@@ -67,10 +68,13 @@ h1 {
     background-color: #087E8B;
     margin-right: 2.5rem;
     margin-left: 2.5rem;
+    margin-bottom: 2rem;
+    width: fit-content;
     padding: 3rem;
     border-radius: 10rem;
     box-shadow: 5px 5px 2px #191a19;
     position: relative;
+    align-content: center;
     transition: transform, background-color, 200ms ease-in-out;
 }
 
@@ -88,5 +92,83 @@ h1 {
     to {
         opacity: 1;
         scale: 1;
+    }
+}
+
+@media (max-width: 1720px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    .description {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 1310px) {
+    h1 {
+        font-size: 35px;
+    }
+
+    .profilePhoto {
+        margin-top: 15%;
+    }
+
+    .description {
+        font-size: 18px;
+    }    
+
+    .sectionLink {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    h1 {
+        text-align: center;
+    }
+
+    .homepageHolder {
+        margin-top: 5rem;
+    }
+
+    .homepageMainContent {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .profilePhotoHolder {
+        text-align: center;
+    }
+
+    .profilePhoto {
+        margin-top: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .creatorInfo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sections {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 590px) {
+    .homepageHolder {
+        margin-top: 3rem;
     }
 }

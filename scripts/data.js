@@ -6,7 +6,254 @@ export const webDevItems = [
         link: "",
         img: "../images/webDev/Nudge.png",
         status: "In Progress", 
-        documentation: "",
+        documentation: `
+        <p class="paragraph">Please Note: This Project is only about halfway finished. The documents below contain planning and iteration up untill a certain point. This documentation 
+        is likely to change in the near future.</p>
+
+        <h3>Project Summary:</h3>
+        <p class="paragraph">This project is made up of two items. First, a mobile application that aims to help people with Alzheimer's and Dementia and people with diagnoses such as ADHD and Dyslexia. Second, a medical provider dashboard that doctors can use to directly add prescriptions and tasks to their patients' profiles. </p>
+        <p class="paragraph">The dashboard allows the doctor to schedule appointments for their patients, set up medications and their dosages, provide all the prescription details and provide details on exercises or activities the user needs to do. They will be able to do this with a patient’s unique application ID (generated when a user creates a profile). This dashboard is still in the planning phase, as up until now, I was aiming to complete a large portion of the mobile application first. </p>
+        <p class="paragraph">The mobile application allows users to create to-do lists (normal, timed and checklists), store medication information, store information about the people in the user’s life, access a calendar to schedule events, see the day’s weather and make emergency calls. Many of these things will also be integrated, allowing the user to access different aspects from different pages. This will mainly have to do with the calendar, where the user will be able to see their timed lists, people’s birthdays and events. The application will also send the user notifications when these events and lists need to be tended to. </p>
+        
+        <h3>Style Guide</h3>
+        <p class="paragraph">The styling might still change in the future, in case I find something doesn’t work according to the plan. But for now, this will be the styling and functions I aim for in the further development of this application. </p>
+        <p class="paragraph">(Only the mobile application wireframes will be found below; wireframes for the dashboard will be made once the application is satisfyingly functional.)</p>
+        <img class="documentImage" src="../images/webDev/nudge/headerText.png" style="width: 60%;" alt="IMAGES" />
+        <img class="documentImage" src="../images/webDev/nudge/bodyText.png" style="width: 60%;" alt="IMAGES" />
+        <p class="paragraph"><i>Font Choice: </i></p>
+        <p class="paragraph">Both Trebuchet MS and Roboto are Sans-Serif typeface fonts. Sans-Serif fonts are fonts that have no extra bits added to the edges of the font (Tymoshchuk, 2021). And although, as Tymoshchuk (2021) states, most neurotypical people can’t really find a difference in readability when reading sans-serif fonts and serif fonts (like Times New Roman), for people who are neurodivergent and people who have poor eyesight, sans-serif fonts are easier to read. Considering that the idea for this application started with the aim to help people with Alzheimer’s and Dementia, and people who live with these are often elderly, it is safe to assume that these fonts would be easier to read. The use of these types of fonts for more accessible design is also mentioned by Ghorbel et al. (2017) when talking about people with Alzheimer’s who have poor eyesight, by Khan et al. (2018) for children with dyslexia and by Baxter (2025) for people who live with ADHD.</p>
+        <img class="documentImage" src="../images/webDev/nudge/light.png" style="width: 40%; height: 40%;" alt="IMAGES" />
+        <img class="documentImage" src="../images/webDev/nudge/dark.png" style="width: 40%; height: 40%;" alt="IMAGES" />
+        <p class="paragraph"><i>Colour Schemes:</i></p> 
+        <p class="paragraph">For now, I have decided to do only a light and dark colour scheme. I focused on the contrast, but also made sure that the contrast is not too heavy. I still wanted there to be enough contrast, so everything is easy to see, but with less contrast, there is less eye strain. Khan et al. (2018) and Ghorbel et al. (2017) for Dyslexia and Alzheimer’s, respectively, both mention avoiding very high contrast, stating that findings show that less contrast can make reading and using the design easier and more accessible. </p>
+        <p class="paragraph"><i>Outline:</i></p> 
+        <p class="paragraph">I want to add a setting to the application that adds an outline to all the buttons in the application in case the drop shadow is not enough. Thus, making the buttons easier to see.</p>
+        <p class="paragraph">Along with the above-mentioned three authors, other articles I looked at that speak on designing for Alzheimer’s, Dementia, ADHD and Dyslexia all said similar things. What it comes down to: </p>
+        <p class="listItem">Simplistic design with no unnecessary distractions.</p>
+        <p class="listItem">No unnecessary actions to make accessing sections as easy as possible.</p>
+        <p class="listItem">Small sections of information.</p>
+        <p class="listItem">Logical file structure.</p>
+        <p class="listItem">Short, descriptive headings.</p>
+        <p class="paragraph">(Erikson, 2024; Design Whisperer, 2025; Williams, 2024)</p>
+        <p class="paragraph">When designing the wireframes for the application and deciding on fonts and colour schemes, these are the things I was trying to keep in mind. The application design is intentionally extremely simple, to avoid unnecessary clutter and distractions. A big goal for this application is to help users get things done, which might be complicated if the application was overly busy.</p>
+
+        <p class="paragraph"><i>Note on Gestures:</i></p>
+        <p class="paragraph">In the initial design, there are a few gestures used, including press, press and hold, and swipe. For the newest iteration, I want to remove the swipe and add a double tap. This is to make the amount of movement as little as possible, in the case of someone having mobility problems (Ghorbel et al., 2017). The tap motion is more minimal than swiping. Thus, I want to implement these three gestures everywhere that it is needed to keep the consistency intact and avoid long sweeping motions that might be harder to achieve. Each use case will be explained below.</p>
+
+        <h3>Screenshots and Wireframes</h3>
+        <p class="paragraph">Note: The picture on the left is what the app page currently looks like. The two on the right are the wireframes for future plans (unless otherwise states).</p>
+        <div class="row">
+            <img class="documentImage" src="../images/webDev/nudge/startPageCur.png" style="width: 34%; height: 34%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/startPageNewL.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/startPageNewD.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+        </div>
+        <p class="paragraph"><i>Splash Screen:</i></p>
+        <p class="paragraph">This is the page that the user will see when they open the application. As shown above, the fonts will be changed to be more legible than the initial design. This page will take the user to a page where they will either log in or create a new account. If the user has already been logged in, the page will immediately go to the Home Page.</p>
+        <div class="row">
+            <img class="documentImage" src="../images/webDev/nudge/preHomeCur.png" style="width: 34%; height: 34%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/preHomeNewL.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/preHomeNewD.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+        </div>
+        <p class="paragraph"><i>Pre-Home Page: </i></p>
+        <p class="paragraph">From this page, the user will either log in or create a new account.</p>
+        <div class="row">
+            <img class="documentImage" src="../images/webDev/nudge/loginCur.png" style="width: 34%; height: 34%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/loginNewL.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/loginNewD.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+        </div>
+        <p class="paragraph"><i>Log In Page:  </i></p>
+        <p class="paragraph">Here, the user will log in with their email address and their password. They are also able to access the “Create a New Account” page through the blue link at the bottom of the page, should they need to.</p>
+        <div class="row">
+            <img class="documentImage" src="../images/webDev/nudge/createCur.png" style="width: 34%; height: 34%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/createNewL.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/createNewD.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+        </div>
+        <p class="paragraph"><i>Create an Account Page: </i></p>
+        <p class="paragraph">Here, the user will be able to create a new account by entering their name, email address and a password that consists of 8 characters, 1 number and 1 special character. The user will also be able to access the login page through the blue link at the bottom of the page, should they need to.</p>
+        <div class="row">
+            <img class="documentImage" src="../images/webDev/nudge/homeCur.png" style="width: 34%; height: 34%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/homeNewL.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/homeNewD.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+        </div>
+        <p class="paragraph"><i>Home Page:  </i></p>
+        <p class="paragraph">The initial design was purely to show the buttons. The newest iteration will have icons along with the labels to make it as easy as possible to access the section you need. The user will be able to access any section of the application from the home page. These include the settings (Top right) and each of the elements made accessible by the application, like the diary logs, to-do lists, etc.</p>
+        <div class="row">
+            <img class="documentImage" src="../images/webDev/nudge/listsCur.png" style="width: 34%; height: 34%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/listsNewL.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/listsNewD.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+        </div>
+        <p class="paragraph"><i>To-Do Lists: </i></p>
+        <p class="paragraph">Here, all the user’s lists will be stored. When a list is created, the user can press and hold the list item to change its type from normal to timed to checklist and back. Clicking on the list itself will take the user to the list where they can then directly interact with its content.</p>
+        <div class="row">
+            <img class="documentImage" src="../images/webDev/nudge/createListsCur.png" style="width: 34%; height: 34%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/createListsNewL.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/createListsNewD.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+        </div>
+        <p class="paragraph"><i>Adding To-Do Lists: </i></p>
+        <p class="paragraph">When clicking on the plus icon in the top right, a box will then appear that allows the user to name their list. Once they press “Done”, the list will then be added to the user’s information and the list on this page. This functionality is the same for all the lists, and the same functionality is used when the user edits an item.</p>
+        <div class="row">
+            <img class="documentImage" src="../images/webDev/nudge/normalListsCur.png" style="width: 34%; height: 34%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/normalListsNewL.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/normalListsNewD.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+        </div>
+        <p class="paragraph"><i>Normal List: </i></p>
+        <p class="paragraph">When accessing a normal list, this is what the user will be presented with. In the first iteration, the user would need to swipe the item to the right to access the delete button and swipe it to the right to access the edit button. I plan on changing this, as shown in the wireframes below. Furthermore, when completing an item, the user needs to press and hold the item for it to be struck through and register as completed in the user’s information.</p>
+        <div class="row">
+            <img class="documentImage" src="../images/webDev/nudge/listActionsNewL.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/listActionsNewD.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+        </div>
+        <p class="paragraph">(No current iteration, only wireframes)</p>
+        <p class="paragraph"><i>Double-tap for Extra Options:  </i></p>
+        <p class="paragraph">Moving forward, the user will double-tap the item to be provided with extra options like delete and edit. This is to keep movement minimal. This will be implemented anywhere where there are list- or log items that the user can interact with, to keep it consistent throughout the application.</p>
+        <div class="row">
+            <img class="documentImage" src="../images/webDev/nudge/timedListsCur.png" style="width: 34%; height: 34%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/timedListsNewL.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/timedListsNewD.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+        </div>
+        <p class="paragraph"><i>Timed List:  </i></p>
+        <p class="paragraph">This list is a little more complicated. The user can add a start and end time at the top to determine a timespan they will be working in. They can then add list items (in the same manner as you do in the normal list). After changing the amount of time they want to spend on each item by clicking on the minutes in the middle of the list item, they can update the list, where the list will then calculate when the task should be started and completed. This can be updated when items are deleted and added. I plan on possibly adding an “auto” functionality that divides the time spent on each item based on its priority. If an item is overdue, the list item turns red. If a list item is outside of the timespan, the item turns orange.</p>
+        <div class="row">
+            <img class="documentImage" src="../images/webDev/nudge/checkListsNewL.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/checkListsNewD.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+        </div>
+        <p class="paragraph">(No current iteration, only wireframes)</p>
+        <p class="paragraph"><i>Checklist:</i></p>
+        <p class="paragraph">A possible new addition. The functionality will be the same as the normal list; however, the aim is a bit different. This is more useful for things like grocery lists. The biggest difference is the check marks on the side.</p>
+        <div class="row">
+            <img class="documentImage" src="../images/webDev/nudge/diaryLogsCur.png" style="width: 34%; height: 34%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/diaryLogsNewL.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/diaryLogsNewD.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+        </div>
+        <p class="paragraph"><i>Diary logs: </i></p>
+        <p class="paragraph">These store information much like a note application. These tiles show the entry name, which can be edited, the date it was created and a preview of the note contained within.</p>
+                <div class="row">
+            <img class="documentImage" src="../images/webDev/nudge/diaryEntryCur.png" style="width: 34%; height: 34%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/diaryEntryNewL.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/diaryEntryNewD.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+        </div>
+        <p class="paragraph"><i>Diary Log Content: </i></p>
+        <p class="paragraph">The diary logs currently only hold text, but I plan on adding functionality to add images and voice recordings as well, for people who find typing hard. This will make it accessible to a wider range of people. </p>
+        <div class="row">
+            <img class="documentImage" src="../images/webDev/nudge/peopleLogsCur.png" style="width: 34%; height: 34%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/peopleLogsNewL.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/peopleLogsNewD.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+        </div>
+        <p class="paragraph"><i>People Logs: </i></p>
+        <p class="paragraph">Here, the people in the user’s life can be stored. These will store each person’s information. On this page, their name and relationship to the user will be showcased. When clicked on, the user can access and edit more information. </p>
+        <div class="row">
+            <img class="documentImage" src="../images/webDev/nudge/addPeopleCur.png" style="width: 34%; height: 34%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/addPeopleNewL.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/addPeopleNewD.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+        </div>
+        <p class="paragraph"><i>Adding People:  </i></p>
+        <p class="paragraph">Initially, adding a person will only require their name and their relationship to the user. The user will be able to edit the content when accessing it separately. </p>
+        <div class="row">
+            <img class="documentImage" src="../images/webDev/nudge/personLogCur.png" style="width: 34%; height: 34%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/personLogNewL.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/personLogNewD.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+        </div>
+        <p class="paragraph"><i>Person Log: </i></p>
+        <p class="paragraph">Here, the user will be able to access and edit the information of the person recorded. It showcases their birthday, number, likes, dislikes, notes, name and relationship. The user will also be able to add a picture of the person.  </p>
+        <div class="row">
+            <img class="documentImage" src="../images/webDev/nudge/medicineCur.png" style="width: 34%; height: 34%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/medicineNewL.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/medicineNewD.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+        </div>
+        <p class="paragraph"><i>Medication Logs:</i></p>
+        <p class="paragraph">Here, the user’s medication will be stored. These tiles will showcase an image of the medicine, its name, dosage, when the medicine should next be fetched (the button to indicate that it was fetched will only appear on the relevant date), and when the next dose is due. The completion buttons can be clicked to indicate that the dosage was taken. This is reset on the next day that a dose needs to be taken. </p>
+        <div class="row">
+            <img class="documentImage" src="../images/webDev/nudge/addMedicineCur.png" style="width: 34%; height: 34%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/addMedicineNewL.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/addMedicineNewD.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+        </div>
+        <p class="paragraph"><i>Adding Medication: </i></p>
+        <p class="paragraph">Here, all the relevant information is added so all the relevant calculations can be made. The user adds the name, dosage, how many times the medication needs to be repeated, when the medicine was first fetched, how often it needs to be fetched, when the first dose was taken, how often the medicine needs to be taken and every time a dose needs to be taken. This does look complicated; however, this is more meant for the caretakers to add all the logs. </p>
+        <div class="row">
+            <img class="documentImage" src="../images/webDev/nudge/calendarNewL.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/calendarNewD.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+        </div>
+        <p class="paragraph">(No current iteration, only wireframes)</p>
+        <p class="paragraph"><i>Calendar:</i></p>
+        <p class="paragraph">The calendar will hold all the events that the user must attend, including appointments. These will hold other information like the time, place and duration. The calendar will also display the weather of the selected day, along with recommended clothing. The calendar will have access to other things like timed lists and the people logs for birthdays. The calendar will show dots on any of the days that contain events the user needs to know about.</p>
+        <div class="row">
+            <img class="documentImage" src="../images/webDev/nudge/addEventNewL.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/addEventNewD.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+        </div>
+        <p class="paragraph">(No current iteration, only wireframes)</p>
+        <p class="paragraph"><i>Adding Calendar Events:</i></p>
+        <p class="paragraph">Events and appointments can be added by adding the event name, place, time and duration of the event. This will then be stored in the calendar and daily agenda.</p>
+        <div class="row">
+            <img class="documentImage" src="../images/webDev/nudge/viewEventNewL.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/viewEventNewD.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+        </div>
+        <p class="paragraph">(No current iteration, only wireframes)</p>
+        <p class="paragraph"><i>View Event:</i></p>
+        <p class="paragraph">The user can view the event and its details by clicking on it in the daily agenda. </p>
+        <div class="row">
+            <img class="documentImage" src="../images/webDev/nudge/clockNewL.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/clockNewD.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+        </div>
+        <p class="paragraph">(No current iteration, only wireframes)</p>
+        <p class="paragraph"><i>Clock: </i></p>
+        <p class="paragraph">(non-essential) I will possibly add a clock page where the user can use the timer for doing a task for a certain time, as well as set up alarms, for any reminder they might need. </p>
+        <div class="row">
+            <img class="documentImage" src="../images/webDev/nudge/emergencyNewL.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/emergencyNewD.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+        </div>
+        <p class="paragraph">(No current iteration, only wireframes)</p>
+        <p class="paragraph"><i>Emergency:</i></p>
+        <p class="paragraph">On this page, the user would need to hold in the emergency call buttons for a certain amount of time for them to call either their emergency contact or Emergency services. </p>
+        <div class="row">
+            <img class="documentImage" src="../images/webDev/nudge/settingsNewL.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+            <img class="documentImage" src="../images/webDev/nudge/settingsNewD.png" style="width: 30%; height: 30%;" alt="IMAGES" />
+        </div>
+        <p class="paragraph">(No current iteration, only wireframes)</p>
+        <p class="paragraph"><i>Settings:</i></p>
+        <p class="paragraph">Here, the user will be able to change the application visually as well as edit the details of their account. </p>
+        <p class="paragraph"><i>Other Notes:</i></p>
+        <p class="paragraph">I am looking to implement a function where a caregiver can prevent the user from editing certain elements, like medicine, to prevent them from accidentally changing important information.</p>
+        
+        <h3>Goals</h3>
+        <p class="paragraph">I divided my goals for this project into two sections: personal and project goals. Over the last few months, working on this project, I found that some of these goals needed more specifics. Below, I will be specifying each goal further and discussing how I have or haven’t worked towards these goals.</p>
+
+<p class="paragraph"><i>Personal:</i></p>
+<p class="paragraph"><i>1.	Implementing Good UI/UX Practices:</i></p>
+<p class="paragraph"><u>Define:</u> To give it a more specific Definition, this goal entails having industry-standard UI/UX that follows the recommended guidelines. UI/UX that is accessible, inclusive, responsive, easily understandable and implemented in a way that makes sense in code.</p>
+<p class="paragraph"><u>Have I worked towards this:</u> The UI/UX currently implemented is not final. And although I did do my best to implement the UI/UX in this way, I think there is a lot of room for improvement. Styling works a little bit differently in React Native, so I have needed to adjust. I am still learning how to implement it properly, and although I do not think I have completely been able to achieve this yet, I am confident I will be able to at least find a better way of implementing the styles than I have been thus far. </p>
+
+<p class="paragraph"><i>2.	Implementing Good, Clean and Understandable Code:</i></p>
+<p class="paragraph"><u>Define:</u> Implementing code that is easily understandable, clean, efficient and consistent. The code uses the correct syntax. On a more personal note, am I able to learn about new code on my own and implement it effectively.</p>
+<p class="paragraph"><u>Have I worked towards this:</u> In a broad sense, yes. I truly attempted to create code that is not unnecessarily convoluted. I will be honest in saying that I do think there are pieces of code that can be streamlined, but as I have continued to create this application, I have learned to do this more easily. I will be going back and adjusting the code to be more streamlined. On the topic of whether I was able to learn new code? This is a definite yes. Although React Native is very similar to ReactJS, it has many nuances, and I had to go through quite a learning curve to get everything to work. I also plan on working towards using a database in the future, which is a whole other challenge.</p>
+
+<p class="paragraph"><i>3.	Staying Feedback Driven and Human First:</i></p>
+<p class="paragraph"><u>Define:</u> Using testing and feedback to make positive changes to improve the project, while making sure to properly discern between useful and non-useful feedback. Making sure the application is made for people and always keeping them in mind.</p>
+<p class="paragraph"><u>Have I worked towards this:</u> Partly yes. I always have the individuals who might use this application in mind when I develop. However, I could not do testing on the application yet. That is the next step after I have finished the last of the frontend for the mobile application.</p>
+
+<p class="paragraph"><i>Project:</i></p>
+<p class="paragraph"><i>1.	Intuitive UI/UX:</i></p>
+<p class="paragraph"><u>Define:</u> UI/UX that is easy to understand and easy for new users to get used to. UI/UX that is easy to interact with, with no unnecessary actions or interactions. UI/UX that is consistent throughout the application.</p>
+<p class="paragraph"><u>Have I worked towards this:</u> I have done my best; however, I did realise that the swiping action might not be a right fit for the application, so I plan on changing it to a double tap that provides more options. Furthermore, I have done my best to stay consistent with the UI/UX; however, I did use this first iteration to test different methods of interacting with the UI/UX to see which would work the best.</p>
+
+<p class="paragraph"><i>2.	Accessibility:</i></p>
+<p class="paragraph"><u>Define:</u> An application that is accessible to anyone who wishes to use it, and that allows the user to personalise their experience to what best suits them.</p>
+<p class="paragraph"><u>Have I worked towards this:</u> I have made decisions on how I will be implementing personalisation through the wireframes shown above, although this still needs to be implemented. When it comes to whether it is accessible to anyone who wishes to use it, I would say yes. I am trying to make the application easy to understand and easy to use so that anyone of any ability can use it.</p> 
+
+<p class="paragraph"><i>3.	Smooth Integration:</i></p>
+<p class="paragraph"><u>Have I worked towards this:</u> I have not reached this part of the project yet, so I do not have any comment on its definition yet. </p>
+
+<p class="paragraph"><i>4.	Scalability:</i></p>
+<p class="paragraph"><u>Define:</u> A scalable application that contains code that can be used to expand the application.</p>
+<p class="paragraph"><u>Have I worked towards this:</u> I have, albeit unintentionally. The elements I have chosen for this application are inherently similar in the way they are set up, which helped me set up many of the pages. But this has also allowed me to think of other components that might be added; the checklist is a good example of this. The application is inherently something you can add to, because it is meant to be an application that people use for different reasons. There is a lot of expanding that can be done in the diary and calendar sections, for example, if you want to optimise parts of it for students. This application can be scaled to a much wider scope than I currently have it at. It is, however, important that I go back and make sure that the code allows for this. There are admittedly a few areas in the code that can be done in a better way.</p>
+
+<h3>References:</h3>
+<p class="paragraph">Baxter, Y.A. (2025) ‘Designing for Neurodiversity: Creating ADHD-Friendly Digital Publications’. Available at: <a class="refLink" href="https://digitalcommons.liberty.edu/masters/1297/">https://digitalcommons.liberty.edu/masters/1297/</a> (Accessed: 28 July 2025).</p>
+<p class="paragraph">Ghorbel, F., Metais, E., Ellouze, N., Hamdi, F. and Gargouri, F.  (2017) “Towards Accessibility Guidelines of Interaction and User Interface Design for Alzheimer’s Disease Patients”. ACHI 2017. The Tenth International Conference on Advances in Computer-Human Interactions, Mar 2017, Nice, France. pp.143-149</p>
+<p class="paragraph">Khan, R., Oon, Y.B., Inam, M., Inam Ul Haq, M. and Hajarah, S. (2018). “Proposed user interface design criteria for children with dyslexia”. International Journal of Engineering and Technology. 7. 5253-5257. 10.14419/ijet.v7i4.25496.</p>
+<p class="paragraph">Tymoshchuk, O. (2021) “Font Readability Research: Key Difference Between Serif Vs Sans Serif Font”, Geniusee. 30 June. Available at: <a class="refLink" href="https://geniusee.com/single-blog/font-readability-research-famous-designers-vs-scientists">https://geniusee.com/single-blog/font-readability-research-famous-designers-vs-scientists</a> (Accessed: 28 July 2025).</p>
+<p class="paragraph">Design Whisperer. (2025) ‘Neurodiverse by Design: UX Strategies for Inclusive Digital Spaces’, Dtalks, 9 January. Available at: <a class="refLink" href="https://medium.com/dtalks/neurodiverse-by-design-ux-strategies-for-inclusive-digital-spaces-f06aef12c95c">https://medium.com/dtalks/neurodiverse-by-design-ux-strategies-for-inclusive-digital-spaces-f06aef12c95c</a> (Accessed: 28 July 2025).</p>
+<p class="paragraph">Williams, R. (2024) “Why is digital design important for someone affected by dementia?” Alzheimer’s Society. 20  March. Available at: <a class="refLink" href="https://www.alzheimers.org.uk/blog/how-design-website-someone-affected-dementia">https://www.alzheimers.org.uk/blog/how-design-website-someone-affected-dementia</a> (Accessed: 28 July 2025).</p>
+<p class="paragraph">Erikson, M. (2024) “Embracing Neurodiversity in UX Design: Crafting Inclusive Digital Environments”. UXmatters. 22 April. Available at: <a class="refLink" href="https://www.alzheimers.org.uk/blog/how-design-website-someone-affected-dementia">https://www.alzheimers.org.uk/blog/how-design-website-someone-affected-dementia</a> (Accessed: 28 July 2025).</p>
+`
     },
     {
         id: "2",
@@ -14,7 +261,7 @@ export const webDevItems = [
         github: "https://github.com/NightLocke15/DIGA4015A_2615283_ChristineHolt_ExamWebApp",
         link: "",
         img: "../images/webDev/CharacterCollection.png",
-        status: "In Progress",
+        status: "Being Revamped",
         documentation: `
         <h3>App Theme:</h3>
 <p class="paragraph">This is a Dungeons and Dragons (2014) Character creator app. Users/players can create

@@ -25,6 +25,7 @@ h1 {
     font-family: "Alegreya Sans SC", sans-serif;
     font-weight: 400;
     font-size: 25px;
+    padding: 0.5rem 1.5rem;
     transition: transform, background-color, 200ms ease-in-out;
 }
 
@@ -55,6 +56,12 @@ h1 {
     to {
         opacity: 1;
         scale: 1;
+    }
+}
+
+@media (max-width: 1000px) {
+    .contactLinks {
+        width: 80%;
     }
 }
 

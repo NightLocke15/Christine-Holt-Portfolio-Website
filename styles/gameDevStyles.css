@@ -101,7 +101,7 @@ img {
     text-align: center;
     background-color: #087E8B;
     padding: 2rem;
-    padding-bottom: 5rem;
+    padding-bottom: 6rem;
     width: 17rem;
     border-radius: 2rem;
     box-shadow: 5px 5px 2px #191a19;
@@ -188,8 +188,9 @@ img {
 .itemLinks {
     flex: 100%;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
     width: 60%;
+    align-items: center;
     margin-left: auto;
     margin-right: auto;
 }
@@ -197,7 +198,7 @@ img {
 .itemLinks a {
     text-decoration: none;
     color: white;
-    width: 30%;
+    width: 50%;
     text-align: center;
     background-color: #087E8B;
     border-radius: 2rem;
@@ -205,10 +206,13 @@ img {
     align-content: center;
     margin-right: 1rem;
     margin-left: 1rem;
+    margin-bottom: 1rem;
     box-shadow: 5px 5px 2px #191a19;
     font-family: "Alegreya Sans SC", sans-serif;
     font-weight: 400;
-    font-size: 25px;
+    font-size: 25px;    
+    padding: 0.5rem 1rem;
+    height: fit-content;
     transition: transform, background-color, 200ms ease-in-out;
 }
 
@@ -317,4 +321,45 @@ thead {
 
 caption {
     text-align: left;
+}
+
+@media (max-width: 1310px) {
+    .portfolioItemShowcase {
+        width: 90%;
+    }
+}
+
+@media (max-width: 1000px) {
+    h1 {
+        font-size: 38px;
+    }
+
+    .mainImage {
+        width: 80%;
+        height: auto;
+    }
+    
+}
+
+@media (max-width: 590px) {
+    h1 {
+        margin-top: 3rem;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .paragraph {
+        font-size: 16px;
+    }
+
+    .listItem {
+        font-size: 16px;
+    }
+
 }

@@ -45,9 +45,10 @@ footer {
     padding: 0;
     margin: 0;
     transition: color 0.2s ease-out;
-    width: 40%;
-    text-align: center;
+    width: 100%;
+    text-align: left;
     position: relative;
+    width: fit-content;
 }
 
 .logoText:hover {
@@ -131,3 +132,119 @@ footer {
     z-index: 1;
     background: linear-gradient(#F26419, #F26419) padding-box;
 }
+
+.mobileNavigation {
+    display: none;
+}
+
+
+
+@media (max-width: 1310px) {
+    .navigationLinksHolder {
+        display: none;
+    }
+
+    .burgerMenu {
+        width: 2rem;
+        height: 2rem;
+        margin-left: auto;
+        margin-top: 1vh;
+        margin-right: 1rem;
+        position: relative;
+    }
+
+    .burgerMenu span {
+        height: 2px;
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        transition: 0.3s ease;
+        border-radius: 1rem;
+    }
+
+    .burgerMenu span:nth-child(1) {
+        top: 25%
+    }
+    
+    .burgerMenu span:nth-child(3) {
+        top: 75%
+    }
+
+    .burgerMenu.open span:nth-child(1) {
+        top: 50%;
+        transform: translate(-50%, -45%) rotate(-135deg);
+    }
+
+    .burgerMenu.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burgerMenu.open span:nth-child(3) {
+        top: 50%;
+        transform: translate(-50%, 45%) rotate(135deg);
+    }
+
+    .mobileNavigation {
+        height: 50vh;
+        width: 100%;
+        background-color: #2a2b2a;
+        box-shadow: -3px 3px 3px #191a19;
+        position: absolute;
+        top: -50vh;
+        left: 0;
+        transition: all ease-in-out 0.3s;
+        display: flex;
+        flex-direction: column;
+        z-index: -1;
+    }
+
+    .mobileNavigation a{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .mobileNavigation.open {
+        height: 50vh;
+        width: 100%;
+        background-color: #2a2b2a;
+        box-shadow: -3px 3px 3px #191a19;
+        position: absolute;
+        top: 4rem;
+        left: 0;
+        transition: all ease-in-out 0.3s;
+        display: flex;
+        flex-direction: column;
+        z-index: -1;
+    }
+}
+
+@media (max-width: 780px) {
+    .logoText {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 590px) {
+    .logoText {
+        font-size: 20px;
+    }
+
+    .burgerMenu {
+        margin-top: 0.1vh;
+    }
+
+    .burgerMenu span {
+        width: 80%;
+    }
+}
+
+@media (max-width: 405px) {
+    .logoText {
+        font-size: 15px;
+    }
+}
+
+

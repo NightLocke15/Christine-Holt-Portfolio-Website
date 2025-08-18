@@ -32,7 +32,9 @@ function addSections() {
         const { id, name, href } = section;
 
         return `<a class="sectionLink" id="${id}" href="${href}">
+                    <p>
                     ${name}
+                    </p>
                 </a>`
     }).join("");
 

@@ -9,6 +9,7 @@ const navigationMenu = [
 ];
 
 const navList = document.querySelector(".navigationLinks");
+const mobileMenu = document.querySelector(".mobileNavigation")
 
 export function navigationBar(currentPage) {
     let links = navigationMenu.map((menuItem) => {
@@ -16,6 +17,7 @@ export function navigationBar(currentPage) {
     }).join("");
 
     navList.innerHTML = links;
+    mobileMenu.innerHTML = links;
 
     const linkList = document.querySelectorAll(".navLink");
 
