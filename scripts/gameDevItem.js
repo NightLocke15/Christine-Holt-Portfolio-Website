@@ -27,7 +27,7 @@ function gameDevItem() {
         <i></i>
     </div>
     <div class="documentContainer">
-    <h2>Documentation</h2>
+    <h2>About</h2>
     <section class="documentation">${portfolioItem[0].documentation}</section>
     </div>`
     title.innerHTML = `${portfolioItem[0].name}`;
