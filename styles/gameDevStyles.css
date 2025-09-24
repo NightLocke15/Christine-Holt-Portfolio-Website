@@ -33,7 +33,6 @@ h1 {
     text-align: center;
     margin-top: 5rem;
     animation: transIn 0.5s;
-    flex: 100%;
 }
 
 h2 {
@@ -68,7 +67,7 @@ img {
 }
 
 .statusReport {
-     font-family: "Alegreya Sans SC", sans-serif;
+    font-family: "Alegreya Sans SC", sans-serif;
     font-weight: 400;
     border: 2px dashed #F58A07;
     border-radius: 1rem;
@@ -123,11 +122,11 @@ img {
 }
 
 .portfolioItemShowcase {
-    width: 60%;
+    width: 95%;
     margin-left: auto;
     margin-right: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin-top: 3rem;
     margin-bottom: 5rem;
     animation: transIn 0.25s;
@@ -141,13 +140,19 @@ img {
     border-radius: 1rem;
     background-color: #087e8b7c;
     max-width: fit-content;
-    padding: 10px 15px 0px;
+    padding: 1rem;
 }
 
 .heading {
     font-family: "Alegreya Sans SC", sans-serif;
     font-size: 28px;
-    margin: 0%;
+    line-height: 0px;
+}
+
+.basicInfoContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .statusParagraph {
@@ -159,11 +164,12 @@ img {
     border-radius: 1rem;
     background-color: #087e8b7c;
     margin-top: 3rem;
-    padding: 0px 2rem;
+    padding: 0px 5rem;
+    flex: 1.5;
 }
 
 .paragraph {
-    font-size: 20px;
+    font-size: 22px;
     line-height: 1.8rem;
     margin: 2rem 0rem;
 }
@@ -177,8 +183,8 @@ img {
     margin-right: auto;
     margin-top: 3rem;
     margin-bottom: 3rem;
-    width: 35rem;
-    height: 20rem;
+    width: 49rem;
+    height: 28rem;
     border-radius: 2rem;
     object-fit: contain;
     max-width: fit-content;

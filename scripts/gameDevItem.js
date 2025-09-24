@@ -15,27 +15,20 @@ function gameDevItem() {
         }
     })    
     
-    itemsShowcase.innerHTML = `<h1>${portfolioItem[0].name}</h1>
-    <div class="container"><p class="heading">Status:</p>
-    <p class="statusParagraph">${portfolioItem[0].status}</p></div>
+    itemsShowcase.innerHTML = `
+    <div class="basicInfoContainer">
+    <h1>${portfolioItem[0].name}</h1>
+    <div class="container"><p class="heading">Status: ${portfolioItem[0].status}</p>
+    </div>
     <img class="mainImage" src="${portfolioItem[0].img}" /> 
     <div class="itemLinks">
     <a href="${portfolioItem[0].github}">GitHub</a>
     <a href="${portfolioItem[0].itch}">itch.io</a>
     </div>
-    <div class="downArrow">
-        <i></i>
-    </div>
+    </div>    
     <div class="documentContainer">
     <h2>About</h2>
     <section class="documentation">${portfolioItem[0].documentation}</section>
     </div>`
     title.innerHTML = `${portfolioItem[0].name}`;
 }   
-
-
-const arrow = document.querySelector(".downArrow");
-
-arrow.addEventListener("click", (scrollEvent) => {
-    arrow.scrollIntoView({ behavior: "smooth", block: "start" });
-})
