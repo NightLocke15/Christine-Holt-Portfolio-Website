@@ -57,7 +57,7 @@ character sheet.</p>
         github: "https://github.com/NightLocke15/WSOA3029A_2615283_ChristineHolt_CommercialWebsite",
         link: "https://nightlocke15.github.io/WSOA3029A_2615283_ChristineHolt_CommercialWebsite/index.html",
         img: "../images/webDev/StepOne.png",
-        status: "Being Revamped",
+        status: "Completed",
         documentation: `
         <p class="paragraph">Please Note: This was a project for a University Module.</p>
         <h3>Website Summary:</h3>
